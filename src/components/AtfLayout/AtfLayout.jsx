@@ -1,6 +1,6 @@
 // This is a comment from Logan
 import React, { Component } from 'react';
-import './_atf-layout.css';
+import './_atf-layout.less';
 
 class AtfLayout extends Component {
     render() {

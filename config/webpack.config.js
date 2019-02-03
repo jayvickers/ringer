@@ -37,8 +37,8 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 // style files regexes
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
+const sassRegex = /\.(?:le|c)ss$/;
+const sassModuleRegex = /\.module\.(less)$/;
 
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
@@ -424,7 +424,7 @@ module.exports = function(webpackEnv) {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                 },
-                'sass-loader'
+                'less-loader'
               ),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -443,7 +443,7 @@ module.exports = function(webpackEnv) {
                   modules: true,
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
-                'sass-loader'
+                'less-loader'
               ),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.

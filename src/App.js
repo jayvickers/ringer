@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.less';
 import AtfLayout from './components/AtfLayout/AtfLayout';
 
 class App extends Component {
