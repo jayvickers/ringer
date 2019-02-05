@@ -1,7 +1,6 @@
 // This is a comment from Logan
 import React, { Component } from "react";
 import BottomPane from "../BottomPane/BottomPane";
-import ActionPane from "../ActionPane/ActionPane";
 import RightArrow from "../Shared/RightArrow/RightArrow";
 import "./_atf-layout.less";
 
@@ -18,11 +17,8 @@ class AtfLayout extends Component {
             <h1> Find a teammate in seconds...</h1>
             <h2> it's dangerous to go alone!</h2>
           </div>
-          <RightArrow />
-          <div className="top-pane-action-container">
-            <ActionPane headerText="Duo Finder" />
-          </div>
         </div>
+        <RightArrow />
         <BottomPane />
       </div>
     );

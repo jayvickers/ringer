@@ -5,18 +5,27 @@
   height: 40px;
   background-color: @off-white-background-2;
   width: 40px;
-  /* display: flex; */
   border: 2px solid @off-white-background-2;
-  /* height: 1em; */
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
-  margin: auto 0;
+  margin: -25px auto 25px;
+  animation: 0.5s ease-out 0s 1 rotater;
+  transform: rotate(180deg);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
 
   ion-icon {
     color: #424344;
     width: 40px;
     height: 40px;
+  }
+}
+
+@keyframes rotater {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }

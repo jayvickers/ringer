@@ -7,7 +7,7 @@ class RightArrow extends Component {
   render() {
     return (
       <div className="right-arrow">
-        <ion-icon name="arrow-round-forward" />
+        <ion-icon name="arrow-round-up" />
       </div>
     );
   }
