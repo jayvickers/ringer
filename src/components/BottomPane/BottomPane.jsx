@@ -6,7 +6,7 @@ class BottomPane extends Component {
   render() {
     return (
       <div className="bottom-pane">
-        <ActionPane headerText="Header Here?" />
+        {/* <ActionPane headerText="Header Here?" /> */}
       </div>
     );
   }

@@ -7,6 +7,9 @@ class AtfLayout extends Component {
   render() {
     return (
       <div className="atf-layout">
+        {/* <div className="test-button">
+          <div className="button-text"> Button Text</div>
+        </div> */}
         {/* call top pane here, replace hard code with real component */}
         <div className="top-pane" />
         <BottomPane />
