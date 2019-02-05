@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ActionPane from "../ActionPane/ActionPane";
+// import ActionPane from "../ActionPane/ActionPane";
 import "./_bottom-pane.less";
 
 class BottomPane extends Component {

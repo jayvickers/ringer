@@ -10,6 +10,8 @@ class ActionPane extends Component {
       <div className="action-pane-content-container">
         <h3 className="action-pane-header">{headerText}</h3>
         <p>here is some text</p>
+        <p>here is some text</p>
+        <p>here is some text</p>
       </div>
     );
   };
