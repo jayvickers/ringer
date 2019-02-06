@@ -1,18 +1,18 @@
 // This is a comment from Logan
 import React, { Component } from "react";
 // import PropTypes from "prop-types";
-import "./_right-arrow.less";
+import "./_arrow.less";
 
-class RightArrow extends Component {
+class Arrow extends Component {
   render() {
     return (
-      <div className="right-arrow">
+      <div className="arrow">
         <ion-icon name="arrow-round-up" />
       </div>
     );
   }
 }
 
-RightArrow.propTypes = {};
+Arrow.propTypes = {};
 
-export default RightArrow;
+export default Arrow;
