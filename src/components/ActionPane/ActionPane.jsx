@@ -1,4 +1,3 @@
-// This is a comment from Logan
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./_action-pane.less";
