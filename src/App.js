@@ -8,14 +8,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <link
-          href="https://fonts.googleapis.com/css?family=Poppins"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat"
-          rel="stylesheet"
-        />
         <AtfLayout />
       </div>
     );
