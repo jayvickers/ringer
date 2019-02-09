@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import MultipleChoiceSelect from "../Shared/MultipleChoiceSelect/MultipleChoiceSelect";
+import TextInput from "../Shared/TextInput/TextInput";
 import "./_action-pane.less";
 
 class ActionPane extends Component {
@@ -17,19 +18,12 @@ class ActionPane extends Component {
 
   getSummonerNameInputBox = () => {
     return (
-      <div className="summoner-name-container">
-        <form action="">
-          <div className="field">
-            <input
-              type="text"
-              name="fullname"
-              id="fullname"
-              placeholder="xMidOrFeed420x"
-            />
-            <label htmlFor="fullname">enter summoner name</label>
-          </div>
-        </form>
-      </div>
+      <TextInput
+        id="summonerName"
+        name="summonerName"
+        placeholder="xMidOrFeed420x"
+        label="Summoner Name"
+      />
     );
   };
 

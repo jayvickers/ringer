@@ -20,7 +20,12 @@ class MultipleChoiceSelect extends Component {
   };
 
   render() {
-    return <div>{this.getRolesPlayed()}</div>;
+    return (
+      <div className="ringer-input-container">
+        <h4> Select your role(s) </h4>
+        {this.getRolesPlayed()}
+      </div>
+    );
   }
 }
 
