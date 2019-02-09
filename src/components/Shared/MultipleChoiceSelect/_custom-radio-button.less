@@ -1,0 +1,36 @@
+@import "../../_globalstyle/_ringer-variables.less";
+
+.button-container {
+  display: flex;
+  input[type="radio"] {
+    position: absolute;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+  label {
+    flex: 1 0 auto;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid @charcoal-font-color;
+    cursor: pointer;
+    color: @charcoal-font-color;
+    transition: all 150ms ease-in;
+    background-color: initial;
+  }
+  &:last-child {
+    label {
+      border: none;
+    }
+  }
+  input[type="radio"]:checked + label,
+  input[type="radio"]:focus + label {
+    background-color: @blue-bg-color;
+    color: @off-white-background-2;
+  }
+}
