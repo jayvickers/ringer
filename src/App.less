@@ -8,10 +8,24 @@
   background-color: @off-white-background-2;
 
   .ringer-input-container {
-    margin: 0 12px;
+    margin: 0 12px 20px;
+
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
     h4 {
-      float: left;
-      margin: 20px 0 10px;
+      margin: 0px auto 10px 0;
+      &.has-sub-header {
+        margin-bottom: 0px;
+      }
+    }
+
+    h5 {
+      margin: 0 auto 0 5px;
+      font-style: italic;
+      font-weight: normal;
     }
   }
 }

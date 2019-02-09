@@ -29,9 +29,14 @@ class MultipleChoiceSelect extends Component {
   };
 
   render() {
+    const { lfRoles } = this.props;
+    const headerText = !!lfRoles
+      ? "Select desired duo role(s)"
+      : "Select your role(s)";
     return (
       <div className="ringer-input-container">
-        <h4> Select your role(s) </h4>
+        <h4 className={lfRoles && "has-sub-header"}> {headerText} </h4>
+        {lfRoles && <h5> *Searching for all roles by default</h5>}
         {this.getRolesPlayed()}
       </div>
     );
