@@ -9,7 +9,13 @@ const getSummonerNameInputBox = props => {
       <div className="text-input-container">
         <form action="">
           <div className="field">
-            <input type="text" name={name} id={id} placeholder={placeholder} />
+            <input
+              type="text"
+              name={name}
+              id={id}
+              placeholder={placeholder}
+              required
+            />
             <label htmlFor={id}>{label}</label>
           </div>
         </form>
