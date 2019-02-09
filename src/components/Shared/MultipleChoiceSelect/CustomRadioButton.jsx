@@ -21,11 +21,11 @@ class CustomRadioButton extends Component {
   };
 
   getButton = () => {
-    const { id, name, value } = this.props;
+    const { id, label, name, value } = this.props;
     return (
       <div className="button-container" onClick={e => this.handleClick(e)}>
         <input type="radio" name={name} id={id} value={value} />
-        <label htmlFor={id}>{name}</label>
+        <label htmlFor={id}>{label}</label>
       </div>
     );
   };
@@ -37,6 +37,7 @@ class CustomRadioButton extends Component {
 
 CustomRadioButton.propTypes = {
   id: PropTypes.string,
+  label: PropTypes.string,
   name: PropTypes.string,
   value: PropTypes.string
 };

@@ -12,6 +12,7 @@ class ActionPane extends Component {
         <h3> {headerText}</h3>
         {this.getSummonerNameInputBox()}
         {this.getRolesPlayed()}
+        {this.getRolesSearching()}
       </div>
     );
   };
@@ -29,6 +30,10 @@ class ActionPane extends Component {
 
   getRolesPlayed = () => {
     return <MultipleChoiceSelect />;
+  };
+
+  getRolesSearching = () => {
+    return <MultipleChoiceSelect lfRoles />;
   };
 
   render() {
