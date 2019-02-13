@@ -34,15 +34,13 @@ class MultipleChoiceSelect extends Component {
     } ${lfRoles ? "lf-roles" : ""}`;
 
     return (
-      <form action="#">
-        <div className={containerClasses}>
-          {this.getRadioButton(top, "top")}
-          {this.getRadioButton(jungle, "jungle")}
-          {this.getRadioButton(mid, "mid")}
-          {this.getRadioButton(bot, "bot")}
-          {this.getRadioButton(support, "support")}
-        </div>
-      </form>
+      <div className={containerClasses}>
+        {this.getRadioButton(top, "top")}
+        {this.getRadioButton(jungle, "jungle")}
+        {this.getRadioButton(mid, "mid")}
+        {this.getRadioButton(bot, "bot")}
+        {this.getRadioButton(support, "support")}
+      </div>
     );
   };
 
