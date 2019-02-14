@@ -7,18 +7,16 @@ const getSummonerNameInputBox = props => {
   return (
     <div className="ringer-input-container">
       <div className="text-input-container">
-        <form action="">
-          <div className="field">
-            <input
-              type="text"
-              name={name}
-              id={id}
-              placeholder={placeholder}
-              required
-            />
-            <label htmlFor={id}>{label}</label>
-          </div>
-        </form>
+        <div className="field">
+          <input
+            type="text"
+            name={name}
+            id={id}
+            placeholder={placeholder}
+            required
+          />
+          <label htmlFor={id}>{label}</label>
+        </div>
       </div>
     </div>
   );

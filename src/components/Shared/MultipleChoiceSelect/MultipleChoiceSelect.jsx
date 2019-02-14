@@ -29,7 +29,7 @@ class MultipleChoiceSelect extends Component {
     const jungle = lfRoles ? "lf-jungle" : "jungle";
     const bot = lfRoles ? "lf-bot" : "bot";
     const support = lfRoles ? "lf-support" : "support";
-    const containerClasses = `segmented-control ${
+    const containerClasses = `select-input ${
       this.state.isExpanded ? "expanded" : ""
     } ${lfRoles ? "lf-roles" : ""}`;
 
