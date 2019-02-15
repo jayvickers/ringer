@@ -10,7 +10,7 @@ var SubmitButton = props => {
   );
 };
 
-SubmitButton.PropTypes = {
+SubmitButton.propTypes = {
   buttonText: PropTypes.string
 };
 
