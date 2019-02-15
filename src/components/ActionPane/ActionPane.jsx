@@ -41,7 +41,7 @@ class ActionPane extends Component {
   };
 
   getSubmitButton = () => {
-    return <SubmitButton buttonText="find a duo" />;
+    return <SubmitButton buttonText="Find a Duo" />;
   };
 
   render() {

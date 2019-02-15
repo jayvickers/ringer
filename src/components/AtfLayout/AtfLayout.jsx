@@ -1,7 +1,6 @@
 // This is a comment from Logan
 import React, { Component } from "react";
 import BottomPane from "../BottomPane/BottomPane";
-import Arrow from "../Shared/Arrow/Arrow";
 import TopPane from "../TopPane/TopPane";
 import "./_atf-layout.less";
 
@@ -10,7 +9,6 @@ class AtfLayout extends Component {
     return (
       <div className="atf-layout">
         <TopPane />
-        <Arrow />
         <BottomPane />
       </div>
     );
