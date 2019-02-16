@@ -1,11 +1,9 @@
-// import React from "react";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import RoleWindow from "./RoleWindow";
 import "./_role-selector.less";
 
 const RoleSelector = props => {
-  //   const [popupOpen, setPopupOpen] = useState({ displayPopup: false });
-  // const [selectedValue, setSelectedValue] = useState(false);
   const [state, setState] = useState({
     popupOpen: false,
     selectedValue: null
@@ -13,8 +11,14 @@ const RoleSelector = props => {
 
   const handleChange = () => {
     var e = document.getElementById("popupSelect");
-    var strUser = e.options[e.selectedIndex].value;
-    setState({ popupOpen: false, selectedValue: strUser });
+    console.log("here");
+    // var strUser = e.options[e.selectedIndex].value;
+    // setState({ popupOpen: false, selectedValue: strUser });
+    if (e) {
+      console.log(e.options[e.selectedIndex].value);
+      var strUser = e.options[e.selectedIndex].value;
+      // setState({ popupOpen: false, selectedValue: strUser });
+    }
   };
 
   const handleClick = () => {
@@ -26,13 +30,10 @@ const RoleSelector = props => {
       <div onClick={() => handleClick()} id="baseDiv">
         {state.selectedValue || "Click Me"}
       </div>
-      <div className={state.popupOpen ? "is-open" : ""} id="popUpDiv">
-        <select onChange={() => handleChange()} id="popupSelect">
-          <option value="First">First</option>
-          <option value="Second">Second</option>
-          <option value="Third">Third</option>
-        </select>
-      </div>
+      <RoleWindow
+        isOpen={state.popupOpen}
+        handleChange={() => handleChange()}
+      />
     </div>
   );
 };
