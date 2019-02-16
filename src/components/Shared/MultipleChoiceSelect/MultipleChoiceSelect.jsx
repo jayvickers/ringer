@@ -1,4 +1,3 @@
-// This is a comment from Logan
 import React, { Component } from "react";
 import CustomRadioButton from "./CustomRadioButton";
 import PropTypes from "prop-types";

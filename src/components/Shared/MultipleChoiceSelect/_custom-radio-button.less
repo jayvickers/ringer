@@ -1,6 +1,9 @@
 @import "../../_globalstyle/_ringer-variables.less";
 
 .button-container {
+  &.primary-role {
+    background-color: orange;
+  }
   display: flex;
   input[type="radio"] {
     position: absolute;
@@ -30,7 +33,9 @@
   }
   input[type="radio"]:checked + label,
   input[type="radio"]:focus + label {
-    background-color: @blue-bg-color;
-    color: @off-white-background-2;
+    &:not(.primary-role) {
+      background-color: @blue-bg-color;
+      color: @off-white-background-2;
+    }
   }
 }
