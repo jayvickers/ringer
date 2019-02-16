@@ -1,4 +1,3 @@
-// This is a comment from Logan
 import React from "react";
 import PropTypes from "prop-types";
 import "./_submit-button.less";
