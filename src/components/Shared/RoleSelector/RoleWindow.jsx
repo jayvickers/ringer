@@ -17,6 +17,7 @@ const RoleWindow = props => {
         <RoleOption option="Mid" handleRoleChange={props.handleRoleChange} />
         <RoleOption option="Bot" handleRoleChange={props.handleRoleChange} />
         <RoleOption option="Sup" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Fill" handleRoleChange={props.handleRoleChange} />
       </div>
     </div>
   );

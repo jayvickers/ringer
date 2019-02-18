@@ -8,12 +8,17 @@ const RoleOption = props => {
     selectedValue: null
   });
 
+  const containerClasses = `role-option-container ${
+    props.option == "Fill" ? "fill" : ""
+  }`;
+
   return (
-    <div
-      onClick={() => props.handleRoleChange(props.option)}
-      className={props.isOpen ? "is-open" : "role-option-container"}
-    >
-      {props.option}
+    <div className={containerClasses}>
+      <span className="role-label">{props.option}</span>
+      <div
+        onClick={() => props.handleRoleChange(props.option)}
+        className={props.isOpen ? "is-open" : "role-option"}
+      />
     </div>
   );
 };

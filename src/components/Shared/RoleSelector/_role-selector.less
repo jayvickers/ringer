@@ -4,7 +4,7 @@
   #popUpDiv {
     z-index: 100;
 
-    background-color: rgba(123, 123, 123, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
     top: 0;
     left: 0;
@@ -12,29 +12,29 @@
     height: 280px;
     &.is-open {
       display: flex;
+      flex-direction: column;
       .option-container {
         width: auto;
-        // height: 100%;
         display: flex;
         margin-left: auto;
         margin-right: auto;
-        :nth-child(even) {
+        .role-option-container:nth-child(even) {
           margin-top: 45px;
         }
-        :nth-child(1) {
+        .role-option-container:nth-child(1) {
           margin-top: 110px;
           margin-right: 0;
         }
-        :nth-child(2) {
+        .role-option-container:nth-child(2) {
           margin-right: 20px;
         }
-        :nth-child(3) {
+        .role-option-container:nth-child(3) {
           margin-top: 20px;
         }
-        :nth-child(4) {
+        .role-option-container:nth-child(4) {
           margin-left: 20px;
         }
-        :nth-child(5) {
+        .role-option-container:nth-child(5) {
           margin-top: 110px;
           margin-left: 0;
         }
