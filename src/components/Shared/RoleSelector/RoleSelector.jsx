@@ -6,7 +6,7 @@ import "./_role-selector.less";
 const RoleSelector = props => {
   const [state, setState] = useState({
     popupOpen: false,
-    selectedValue: null
+    primaryRole: "fill"
   });
 
   const handleChange = () => {
@@ -25,15 +25,16 @@ const RoleSelector = props => {
     setState({ popupOpen: true });
   };
 
+  const setPrimaryRole = inputRole => {
+    setState({ primaryRole: inputRole });
+  };
+
   return (
     <div className="role-selector-container">
       <div onClick={() => handleClick()} id="baseDiv">
-        {state.selectedValue || "Click Me"}
+        {state.primaryRole || "Click Me"}
       </div>
-      <RoleWindow
-        isOpen={state.popupOpen}
-        handleChange={() => handleChange()}
-      />
+      <RoleWindow isOpen={state.popupOpen} handleRoleChange={setPrimaryRole} />
     </div>
   );
 };

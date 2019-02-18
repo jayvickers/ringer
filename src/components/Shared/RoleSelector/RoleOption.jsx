@@ -9,14 +9,18 @@ const RoleOption = props => {
   });
 
   return (
-    <div className={props.isOpen ? "is-open" : "role-option-container"}>
+    <div
+      onClick={() => props.handleRoleChange(props.option)}
+      className={props.isOpen ? "is-open" : "role-option-container"}
+    >
       {props.option}
     </div>
   );
 };
 
 RoleOption.propTypes = {
-  option: PropTypes.string
+  option: PropTypes.string,
+  handleRoleChange: PropTypes.func
 };
 
 export default RoleOption;
