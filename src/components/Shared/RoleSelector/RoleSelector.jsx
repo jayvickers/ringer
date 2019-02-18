@@ -6,7 +6,7 @@ import "./_role-selector.less";
 const RoleSelector = props => {
   const [state, setState] = useState({
     popupOpen: false,
-    primaryRole: "fill"
+    primaryRole: null
   });
 
   const handleChange = () => {

@@ -11,7 +11,21 @@
     width: 200px;
     height: 300px;
     &.is-open {
-      display: block;
+      display: flex;
+      .option-container {
+        // width: 100%;
+        // height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .left-options,
+      .center-options,
+      .right-options {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
     }
   }
   #popupSelect {

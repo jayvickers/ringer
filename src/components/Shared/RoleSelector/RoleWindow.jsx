@@ -11,12 +11,13 @@ const RoleWindow = props => {
 
   return (
     <div className={props.isOpen ? "is-open" : ""} id="popUpDiv">
-      <RoleOption option="Mid" handleRoleChange={props.handleRoleChange} />
-      {/* <select onChange={props.handleChange()} id="popupSelect">
-        <option value="First">First</option>
-        <option value="Second">Second</option>
-        <option value="Third">Third</option>
-      </select> */}
+      <div className="option-container">
+        <RoleOption option="Top" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Jng" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Mid" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Bot" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Sup" handleRoleChange={props.handleRoleChange} />
+      </div>
     </div>
   );
 };

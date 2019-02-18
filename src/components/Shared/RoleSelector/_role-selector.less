@@ -8,10 +8,37 @@
     display: none;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 300px;
+    width: 380px;
+    height: 280px;
     &.is-open {
-      display: block;
+      display: flex;
+      .option-container {
+        width: auto;
+        // height: 100%;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        :nth-child(even) {
+          margin-top: 45px;
+        }
+        :nth-child(1) {
+          margin-top: 110px;
+          margin-right: 0;
+        }
+        :nth-child(2) {
+          margin-right: 20px;
+        }
+        :nth-child(3) {
+          margin-top: 20px;
+        }
+        :nth-child(4) {
+          margin-left: 20px;
+        }
+        :nth-child(5) {
+          margin-top: 110px;
+          margin-left: 0;
+        }
+      }
     }
   }
   #popupSelect {
