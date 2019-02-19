@@ -19,8 +19,8 @@ code {
     overflow-x: hidden;
     overflow-y: visible;
   }
-  .app {
-    height: 100%;
+  .App {
+    height: 100% !important;
   }
   .top-pane {
     .top-pane-text-container {
@@ -36,6 +36,10 @@ code {
 
 //give more space for small monitors since we're not scrolling vertically
 @media @macbook {
+  .ringer-input-container {
+    margin: 0 12px 4px 0 !important;
+  }
+
   .top-pane {
     flex-direction: row !important;
     .top-pane-text-container {
@@ -53,7 +57,17 @@ code {
   .top-pane {
     .top-pane-text-container {
       h1 {
-        font-size: 3em;
+        font-size: 3em !important;
+      }
+    }
+  }
+}
+
+@media @smalltablet {
+  .top-pane {
+    .top-pane-text-container {
+      h1 {
+        font-size: 2em !important;
       }
     }
   }
