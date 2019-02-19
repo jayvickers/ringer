@@ -5,7 +5,7 @@ import "./_role-option.less";
 const RoleOption = props => {
   const containerClasses = `role-option-container ${
     props.option === "Fill" ? "fill" : ""
-  }`;
+  } ${props.placeHolder ? "placeholder" : ""}`;
 
   const optionClasses = `role-option ${props.option}`;
 
@@ -22,7 +22,8 @@ const RoleOption = props => {
 
 RoleOption.propTypes = {
   option: PropTypes.string,
-  handleRoleChange: PropTypes.func
+  handleRoleChange: PropTypes.func,
+  placeHolder: PropTypes.bool
 };
 
 export default RoleOption;
