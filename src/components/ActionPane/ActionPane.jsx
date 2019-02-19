@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import MultipleChoiceSelect from "../Shared/MultipleChoiceSelect/MultipleChoiceSelect";
 import TextInput from "../Shared/TextInput/TextInput";
@@ -7,21 +7,16 @@ import RoleSelector from "../Shared/RoleSelector/RoleSelector";
 import "./_action-pane.less";
 
 const ActionPane = props => {
-  const [state, setState] = useState({
-    popupOpen: false,
-    primaryRole: "fill"
-  });
-
   const getActionPaneBodyContent = () => {
     const { headerText } = props;
     return (
       <div className="action-pane-content-container">
         <h3> {headerText}</h3>
         <form action="#">
-          {/* {this.getSummonerNameInputBox()} */}
+          {getSummonerNameInputBox()}
           {getRolesPlayed()}
-          {/* {this.getRolesSearching()}
-          {this.getSubmitButton()} */}
+          {getRolesSearching()}
+          {getSubmitButton()}
         </form>
       </div>
     );

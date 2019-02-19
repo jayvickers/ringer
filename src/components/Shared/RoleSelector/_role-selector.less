@@ -1,42 +1,48 @@
 @import "../../_globalstyle/_ringer-variables.less";
 
+@even-spacing-top-margin: 45px;
+@mid-top-margin: 20px;
+@top-sup-spacing: 110px;
+@top-sup-side-spacing: 20px;
+@jng-bot-spacing: 40px;
+
 .role-selector-container {
   #popUpDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     z-index: 100;
 
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
     top: 0;
     left: 0;
-    width: 380px;
-    height: 280px;
     &.is-open {
       display: flex;
       flex-direction: column;
       .option-container {
         width: auto;
         display: flex;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         .role-option-container:nth-child(even) {
-          margin-top: 45px;
+          margin-top: @even-spacing-top-margin;
         }
         .role-option-container:nth-child(1) {
-          margin-top: 110px;
-          margin-right: 0;
+          margin-top: @top-sup-spacing;
+          margin-right: @top-sup-side-spacing;
         }
         .role-option-container:nth-child(2) {
-          margin-right: 20px;
+          margin-right: @jng-bot-spacing;
         }
         .role-option-container:nth-child(3) {
-          margin-top: 20px;
+          margin-top: @mid-top-margin;
         }
         .role-option-container:nth-child(4) {
-          margin-left: 20px;
+          margin-left: @jng-bot-spacing;
         }
         .role-option-container:nth-child(5) {
-          margin-top: 110px;
-          margin-left: 0;
+          margin-top: @top-sup-spacing;
+          margin-left: @top-sup-side-spacing;
         }
       }
     }

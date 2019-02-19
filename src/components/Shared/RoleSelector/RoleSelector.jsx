@@ -9,23 +9,12 @@ const RoleSelector = props => {
     primaryRole: null
   });
 
-  const handleChange = () => {
-    var e = document.getElementById("popupSelect");
-    console.log("here");
-    // var strUser = e.options[e.selectedIndex].value;
-    // setState({ popupOpen: false, selectedValue: strUser });
-    if (e) {
-      console.log(e.options[e.selectedIndex].value);
-      var strUser = e.options[e.selectedIndex].value;
-      // setState({ popupOpen: false, selectedValue: strUser });
-    }
-  };
-
   const handleClick = () => {
     setState({ popupOpen: true });
   };
 
-  const setPrimaryRole = inputRole => {
+  const setPrimaryRole = (e, inputRole) => {
+    e.stopPropagation();
     setState({ primaryRole: inputRole });
   };
 

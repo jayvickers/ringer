@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "./RoleOption";
 import "./_role-window.less";
 
 const RoleWindow = props => {
-  const [state, setState] = useState({
-    popupOpen: props.isOpen,
-    selectedValue: null
-  });
-
+  const handleClick = e => {
+    props.handleRoleChange(e, "Fill");
+  };
   return (
-    <div className={props.isOpen ? "is-open" : ""} id="popUpDiv">
+    <div
+      onClick={e => handleClick(e)}
+      className={props.isOpen ? "is-open" : ""}
+      id="popUpDiv"
+    >
       <div className="option-container">
         <RoleOption option="Top" handleRoleChange={props.handleRoleChange} />
         <RoleOption option="Jng" handleRoleChange={props.handleRoleChange} />
