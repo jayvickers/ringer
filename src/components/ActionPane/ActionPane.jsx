@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MultipleChoiceSelect from "../Shared/MultipleChoiceSelect/MultipleChoiceSelect";
 import TextInput from "../Shared/TextInput/TextInput";
 import SubmitButton from "../Shared/SubmitButton/SubmitButton";
 import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";

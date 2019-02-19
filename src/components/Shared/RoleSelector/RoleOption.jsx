@@ -7,12 +7,14 @@ const RoleOption = props => {
     props.option === "Fill" ? "fill" : ""
   }`;
 
+  const optionClasses = `role-option ${props.option}`;
+
   return (
     <div className={containerClasses}>
       <span className="role-label">{props.option}</span>
       <div
         onClick={e => props.handleRoleChange(e, props.option)}
-        className={props.isOpen ? "is-open" : "role-option"}
+        className={optionClasses}
       />
     </div>
   );

@@ -15,10 +15,13 @@ const RoleWindow = props => {
     >
       <div className="option-container">
         <RoleOption option="Top" handleRoleChange={props.handleRoleChange} />
-        <RoleOption option="Jng" handleRoleChange={props.handleRoleChange} />
+        <RoleOption option="Jungle" handleRoleChange={props.handleRoleChange} />
         <RoleOption option="Mid" handleRoleChange={props.handleRoleChange} />
         <RoleOption option="Bot" handleRoleChange={props.handleRoleChange} />
-        <RoleOption option="Sup" handleRoleChange={props.handleRoleChange} />
+        <RoleOption
+          option="Support"
+          handleRoleChange={props.handleRoleChange}
+        />
         <RoleOption option="Fill" handleRoleChange={props.handleRoleChange} />
       </div>
     </div>
