@@ -14,12 +14,26 @@
       font-size: 3.5em;
     }
   }
-  .top-pane-action-container {
-    margin: auto 5vw;
+}
+
+//give more space for small monitors since we're not scrolling vertically
+@media (max-height: @macbook-height) {
+  .top-pane {
+    flex-direction: row;
+
     .action-pane {
-      width: 450px;
-      height: 350px;
-      color: @charcoal-font-color;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+//buy some more space for tablet widths
+@media @tablet {
+  .top-pane {
+    .top-pane-text-container {
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 }
