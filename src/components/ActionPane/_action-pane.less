@@ -2,8 +2,9 @@
 
 .action-pane {
   display: flex;
-  width: 400px;
-  height: 340px;
+  flex: 1 1 auto;
+  max-width: 400px;
+  max-height: 340px;
   background-color: @off-white-background;
   margin: 5px auto 33px;
   transition: box-shadow 150ms ease-in;
@@ -33,5 +34,11 @@
   }
   h3 {
     margin: auto 0;
+  }
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

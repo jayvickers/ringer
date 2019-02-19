@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import MultipleChoiceSelect from "../Shared/MultipleChoiceSelect/MultipleChoiceSelect";
 import TextInput from "../Shared/TextInput/TextInput";
 import SubmitButton from "../Shared/SubmitButton/SubmitButton";
-import RoleSelector from "../Shared/RoleSelector/RoleSelector";
+import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";
 import "./_action-pane.less";
 
 const ActionPane = props => {
@@ -34,12 +34,11 @@ const ActionPane = props => {
   };
 
   const getRolesPlayed = () => {
-    //return <MultipleChoiceSelect />;
-    return <RoleSelector />;
+    return <RoleInputContainer />;
   };
 
   const getRolesSearching = () => {
-    return <MultipleChoiceSelect lfRoles />;
+    return <RoleInputContainer lfRoles />;
   };
 
   const getSubmitButton = () => {
