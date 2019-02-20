@@ -15,6 +15,19 @@ const RoleInputContainer = props => {
     }
   };
 
+  /* 
+  logic:
+
+  DISABLE SECOND ROLESELECTOR
+  -if Fill is primary role, dont allow secondary role option
+
+  DISABLE INDIVIDUAL OPTIONS INSIDE THE POPUP WINDOW
+  -nothing is disabled in the primary role selector. If you pick the one that was already selected, it just stays the same. 
+    If you pick your current secondary role, it switches to your main role, and your secondary role becomes Fill
+
+  -primary role selection is disabled within the secondary role selector,if you pick your current secondary role again it just stays the same
+  */
+
   return (
     <div className="ringer-input-container">
       <h4>Select your roles</h4>
