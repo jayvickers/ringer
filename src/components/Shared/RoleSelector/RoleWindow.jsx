@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "./RoleOption";
-import "./_role-window.less";
 
 const RoleWindow = props => {
   const handleClick = e => {
