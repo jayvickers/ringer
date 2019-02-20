@@ -1,11 +1,12 @@
 @import "../../_globalstyle/_ringer-variables.less";
 
-@even-spacing-top-margin: 45px;
-@mid-top-margin: 20px;
-@top-sup-spacing: 110px;
-@top-sup-side-spacing: 20px;
-@jng-bot-spacing: 40px;
-
+@midpoint-top: 35%;
+@midpoint-left: 50%;
+@jngbot-top: @midpoint-top + 3%;
+@jngbot-side-offset: 9%;
+@topsup-top: @midpoint-top + 11%;
+@topsup-side-offset: 16%;
+@fill-top: @midpoint-top + 25%;
 .role-selector-container {
   #popUpDiv {
     // &:before {
@@ -46,32 +47,32 @@
 
         //top
         .role-option-container:nth-child(1) {
-          top: 46%;
-          left: 34%;
+          top: @topsup-top;
+          left: @midpoint-left - @topsup-side-offset;
         }
         //jng
         .role-option-container:nth-child(2) {
-          top: 38%;
-          left: 41%;
+          top: @jngbot-top;
+          left: @midpoint-left - @jngbot-side-offset;
         }
         //mid
         .role-option-container:nth-child(3) {
-          top: 35%;
+          top: @midpoint-top;
           left: 50%;
         }
         //bot
         .role-option-container:nth-child(4) {
-          top: 38%;
-          left: 59%;
+          top: @jngbot-top;
+          left: @midpoint-left + @jngbot-side-offset;
         }
         //sup
         .role-option-container:nth-child(5) {
-          top: 46%;
-          left: 66%;
+          top: @topsup-top;
+          left: @midpoint-left + @topsup-side-offset;
         }
         //fill
         .role-option-container:nth-child(6) {
-          top: 60%;
+          top: @fill-top;
           left: 50%;
         }
       }
@@ -79,5 +80,46 @@
   }
   #popupSelect {
     z-index: 1000;
+  }
+}
+
+@media @mobile {
+  .role-selector-container {
+    #popUpDiv {
+      &.is-open {
+        div.option-container {
+          //top
+          .role-option-container:nth-child(1) {
+            top: @topsup-top;
+            left: @midpoint-left - (@topsup-side-offset * 2.2);
+          }
+          //jng
+          .role-option-container:nth-child(2) {
+            top: @jngbot-top;
+            left: @midpoint-left - (@jngbot-side-offset * 2);
+          }
+          //mid
+          .role-option-container:nth-child(3) {
+            top: @midpoint-top;
+            left: 50%;
+          }
+          //bot
+          .role-option-container:nth-child(4) {
+            top: @jngbot-top;
+            left: @midpoint-left + (@jngbot-side-offset * 2);
+          }
+          //sup
+          .role-option-container:nth-child(5) {
+            top: @topsup-top;
+            left: @midpoint-left + (@topsup-side-offset * 2.2);
+          }
+          //fill
+          .role-option-container:nth-child(6) {
+            top: @fill-top;
+            left: 50%;
+          }
+        }
+      }
+    }
   }
 }
