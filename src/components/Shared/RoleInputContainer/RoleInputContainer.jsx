@@ -34,7 +34,9 @@ const RoleInputContainer = props => {
 
   return (
     <div className="ringer-input-container">
-      <h4>Select your roles</h4>
+      <h4>
+        {props.lfRoles ? "Select desired duo's roles" : "Select your roles"}
+      </h4>
       <div className="role-input-container">
         <RoleSelector isPrimary passRoles={handleClick} />
         {primaryRole && primaryRole !== "Fill" && (
