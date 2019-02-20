@@ -4,10 +4,8 @@ import "./_role-option.less";
 
 const RoleOption = props => {
   const containerClasses = `role-option-container ${
-    props.option === "Fill" ? "fill" : ""
-  } ${props.placeHolder ? "placeholder" : ""} ${
-    props.isDisabled ? "disabled" : ""
-  }`;
+    props.placeHolder ? "placeholder" : ""
+  } ${props.isDisabled ? "disabled" : ""}`;
 
   const optionClasses = `role-option ${props.option}`;
 

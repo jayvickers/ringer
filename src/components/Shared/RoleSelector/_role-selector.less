@@ -39,28 +39,40 @@
       display: flex;
       flex-direction: column;
       .option-container {
-        width: auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
         display: flex;
-        margin: auto;
-        .role-option-container:nth-child(even) {
-          margin-top: @even-spacing-top-margin;
-        }
+
+        //top
         .role-option-container:nth-child(1) {
-          margin-top: @top-sup-spacing;
-          margin-right: @top-sup-side-spacing;
+          top: 46%;
+          left: 34%;
         }
+        //jng
         .role-option-container:nth-child(2) {
-          margin-right: @jng-bot-spacing;
+          top: 38%;
+          left: 41%;
         }
+        //mid
         .role-option-container:nth-child(3) {
-          margin-top: @mid-top-margin;
+          top: 35%;
+          left: 50%;
         }
+        //bot
         .role-option-container:nth-child(4) {
-          margin-left: @jng-bot-spacing;
+          top: 38%;
+          left: 59%;
         }
+        //sup
         .role-option-container:nth-child(5) {
-          margin-top: @top-sup-spacing;
-          margin-left: @top-sup-side-spacing;
+          top: 46%;
+          left: 66%;
+        }
+        //fill
+        .role-option-container:nth-child(6) {
+          top: 60%;
+          left: 50%;
         }
       }
     }

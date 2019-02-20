@@ -10,8 +10,8 @@ const RoleInputContainer = props => {
   const handleClick = (e, inputRole, isPrimary) => {
     if (isPrimary) {
       if (inputRole === secondaryRole) {
+        setSecondaryRole(primaryRole);
         setPrimaryRole(inputRole);
-        setSecondaryRole("Fill");
       }
       setPrimaryRole(inputRole);
     } else {
@@ -27,7 +27,7 @@ const RoleInputContainer = props => {
 
   DISABLE INDIVIDUAL OPTIONS INSIDE THE POPUP WINDOW
   -nothing is disabled in the primary role selector. If you pick the one that was already selected, it just stays the same. 
-    If you pick your current secondary role, it switches to your main role, and your secondary role becomes Fill
+    If you pick your current secondary role, it switches to your main role, and your secondary role becomes what your primary role was
 
   -primary role selection is disabled within the secondary role selector,if you pick your current secondary role again it just stays the same
   */
