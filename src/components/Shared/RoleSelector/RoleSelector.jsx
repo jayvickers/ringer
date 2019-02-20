@@ -24,7 +24,9 @@ const RoleSelector = props => {
     <div className="role-selector-container">
       <div onClick={() => handleClick()} id="baseDiv">
         <RoleOption
-          option={state.role ? state.role : "Fill"}
+          option={
+            props.overRide ? props.overRide : state.role ? state.role : "Fill"
+          }
           handleRoleChange={() => {}}
           placeHolder
         />
@@ -36,6 +38,7 @@ const RoleSelector = props => {
 
 RoleSelector.propTypes = {
   isPrimary: PropTypes.bool,
+  overRide: PropTypes.string,
   passRoles: PropTypes.func
 };
 

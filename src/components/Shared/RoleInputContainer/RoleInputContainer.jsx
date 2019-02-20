@@ -9,6 +9,10 @@ const RoleInputContainer = props => {
 
   const handleClick = (e, inputRole, isPrimary) => {
     if (isPrimary) {
+      if (inputRole === secondaryRole) {
+        setPrimaryRole(inputRole);
+        setSecondaryRole("Fill");
+      }
       setPrimaryRole(inputRole);
     } else {
       setSecondaryRole(inputRole);
@@ -36,6 +40,7 @@ const RoleInputContainer = props => {
         {primaryRole && primaryRole !== "Fill" && (
           <RoleSelector
             disabledRole={primaryRole !== "Fill" ? primaryRole : null}
+            overRide={secondaryRole}
             passRoles={handleClick}
           />
         )}
