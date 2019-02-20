@@ -10,7 +10,7 @@ const getSummonerNameInputBox = props => {
         <div className="field">
           <input
             type="text"
-            maxlength={maxlength}
+            maxLength={maxlength}
             name={name}
             id={id}
             placeholder={placeholder}
