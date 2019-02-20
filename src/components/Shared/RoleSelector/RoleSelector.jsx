@@ -17,6 +17,7 @@ const RoleSelector = props => {
   const setRole = (e, inputRole) => {
     e.stopPropagation();
     setState({ role: inputRole });
+    props.passRoles(e, inputRole, props.isPrimary);
   };
 
   return (
@@ -34,7 +35,8 @@ const RoleSelector = props => {
 };
 
 RoleSelector.propTypes = {
-  buttonText: PropTypes.string
+  isPrimary: PropTypes.bool,
+  passRoles: PropTypes.func
 };
 
 export default RoleSelector;

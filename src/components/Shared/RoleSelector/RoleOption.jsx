@@ -9,6 +9,10 @@ const RoleOption = props => {
 
   const optionClasses = `role-option ${props.option}`;
 
+  const handleClick = e => {
+    props.handleRoleChange(e, "Fill");
+  };
+
   return (
     <div className={containerClasses}>
       <span className="role-label">{props.option}</span>
