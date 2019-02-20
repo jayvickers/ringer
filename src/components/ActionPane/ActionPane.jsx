@@ -25,6 +25,7 @@ const ActionPane = props => {
     return (
       <TextInput
         id="summonerName"
+        maxlength="20"
         name="summonerName"
         placeholder="xMidOrFeed420x"
         label="Summoner Name"
