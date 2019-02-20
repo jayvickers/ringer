@@ -14,11 +14,28 @@ const RoleWindow = props => {
       id="popUpDiv"
     >
       <div className="option-container">
-        <RoleOption option="Top" handleRoleChange={props.handleRoleChange} />
-        <RoleOption option="Jungle" handleRoleChange={props.handleRoleChange} />
-        <RoleOption option="Mid" handleRoleChange={props.handleRoleChange} />
-        <RoleOption option="Bot" handleRoleChange={props.handleRoleChange} />
         <RoleOption
+          isDisabled={props.disabledRole === "Top"}
+          option="Top"
+          handleRoleChange={props.handleRoleChange}
+        />
+        <RoleOption
+          isDisabled={props.disabledRole === "Jungle"}
+          option="Jungle"
+          handleRoleChange={props.handleRoleChange}
+        />
+        <RoleOption
+          isDisabled={props.disabledRole === "Mid"}
+          option="Mid"
+          handleRoleChange={props.handleRoleChange}
+        />
+        <RoleOption
+          isDisabled={props.disabledRole === "Bot"}
+          option="Bot"
+          handleRoleChange={props.handleRoleChange}
+        />
+        <RoleOption
+          isDisabled={props.disabledRole === "Support"}
           option="Support"
           handleRoleChange={props.handleRoleChange}
         />
@@ -29,6 +46,7 @@ const RoleWindow = props => {
 };
 
 RoleWindow.propTypes = {
+  disabledRole: PropTypes.string,
   handleRoleChange: PropTypes.func,
   isOpen: PropTypes.bool
 };

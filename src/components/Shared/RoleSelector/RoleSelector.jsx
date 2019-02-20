@@ -31,12 +31,17 @@ const RoleSelector = props => {
           placeHolder
         />
       </div>
-      <RoleWindow isOpen={state.popupOpen} handleRoleChange={setRole} />
+      <RoleWindow
+        disabledRole={props.disabledRole}
+        isOpen={state.popupOpen}
+        handleRoleChange={setRole}
+      />
     </div>
   );
 };
 
 RoleSelector.propTypes = {
+  disabledRole: PropTypes.string,
   isPrimary: PropTypes.bool,
   overRide: PropTypes.string,
   passRoles: PropTypes.func

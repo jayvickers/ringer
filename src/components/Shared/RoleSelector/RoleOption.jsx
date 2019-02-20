@@ -5,13 +5,16 @@ import "./_role-option.less";
 const RoleOption = props => {
   const containerClasses = `role-option-container ${
     props.option === "Fill" ? "fill" : ""
-  } ${props.placeHolder ? "placeholder" : ""}`;
+  } ${props.placeHolder ? "placeholder" : ""} ${
+    props.isDisabled ? "disabled" : ""
+  }`;
 
   const optionClasses = `role-option ${props.option}`;
 
   return (
     <div className={containerClasses}>
       <span className="role-label">{props.option}</span>
+      <div className="testing" />
       <div
         onClick={e => props.handleRoleChange(e, props.option)}
         className={optionClasses}
@@ -21,6 +24,7 @@ const RoleOption = props => {
 };
 
 RoleOption.propTypes = {
+  isDisabled: PropTypes.bool,
   option: PropTypes.string,
   handleRoleChange: PropTypes.func,
   placeHolder: PropTypes.bool
