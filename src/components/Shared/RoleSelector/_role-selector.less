@@ -1,12 +1,12 @@
 @import "../../_globalstyle/_ringer-variables.less";
 
-@midpoint-top: 35%;
+@midpoint-top: 27%;
 @midpoint-left: 50%;
-@jngbot-top: @midpoint-top + 3%;
-@jngbot-side-offset: 9%;
-@topsup-top: @midpoint-top + 11%;
-@topsup-side-offset: 16%;
-@fill-top: @midpoint-top + 25%;
+@jngbot-top: @midpoint-top + 8%;
+@jngbot-side-offset: 12%;
+@topsup-top: @midpoint-top + 21%;
+@topsup-side-offset: 20%;
+@fill-top: @midpoint-top + 35%;
 .role-selector-container {
   #popUpDiv {
     // &:before {
@@ -31,8 +31,7 @@
     height: 100%;
     z-index: 100;
 
-    background-color: rgba(0, 0, 0, 0.95);
-    box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.7);
     display: none;
     top: 0;
     left: 0;
@@ -40,9 +39,14 @@
       display: flex;
       flex-direction: column;
       .option-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.3);
+        background-color: rgba(0, 0, 0, 0.95);
+        top: 10%;
+        bottom: 10%;
+        right: 10%;
+        left: 10%;
+        border-radius: 10px;
         display: flex;
 
         //top
