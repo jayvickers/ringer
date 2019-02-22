@@ -9,23 +9,6 @@
 @fill-top: @midpoint-top + 35%;
 .role-selector-container {
   #popUpDiv {
-    // &:before {
-    //   left: 0;
-    //   right: 0;
-    //   z-index: 1;
-    //   display: block;
-    //   background-image: url(http://www.yosemitehikes.com/images/wallpaper/yosemitehikes.com-valley-winter-1366x768.jpg);
-    //   -webkit-filter: blur(10px);
-    //   -moz-filter: blur(10px);
-    //   -o-filter: blur(10px);
-    //   -ms-filter: blur(10px);
-    //   filter: blur(8px);
-    //   position: fixed;
-    //   width: 100%;
-    //   height: 100%;
-    //   content: "";
-    //   z-index: -1;
-    // }
     position: absolute;
     width: 100%;
     height: 100%;
@@ -42,10 +25,10 @@
         position: absolute;
         box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.3);
         background-color: rgba(0, 0, 0, 0.95);
-        top: 10%;
-        bottom: 10%;
-        right: 10%;
-        left: 10%;
+        top: 15%;
+        bottom: 25%;
+        right: 25%;
+        left: 25%;
         border-radius: 10px;
         display: flex;
 
@@ -92,10 +75,14 @@
     #popUpDiv {
       &.is-open {
         div.option-container {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
           //top
           .role-option-container:nth-child(1) {
             top: @topsup-top;
-            left: @midpoint-left - (@topsup-side-offset * 2.2);
+            left: @midpoint-left - (@topsup-side-offset * 1.6);
           }
           //jng
           .role-option-container:nth-child(2) {
@@ -115,13 +102,28 @@
           //sup
           .role-option-container:nth-child(5) {
             top: @topsup-top;
-            left: @midpoint-left + (@topsup-side-offset * 2.2);
+            left: @midpoint-left + (@topsup-side-offset * 1.6);
           }
           //fill
           .role-option-container:nth-child(6) {
             top: @fill-top;
             left: 50%;
           }
+        }
+      }
+    }
+  }
+}
+
+@media @tablet {
+  .role-selector-container {
+    #popUpDiv {
+      &.is-open {
+        div.option-container {
+          top: 10%;
+          bottom: 10%;
+          right: 10%;
+          left: 10%; //top
         }
       }
     }
