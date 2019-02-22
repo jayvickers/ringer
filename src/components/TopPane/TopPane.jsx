@@ -8,10 +8,10 @@ const TopPane = props => {
   const [showResultsPane, setShowResultsPane] = useState(true);
   const topPaneClasses = classNames({
     "top-pane": true,
-    "has-results-pane": true
+    "has-results-pane": showResultsPane
   });
   return (
-    <div className="top-pane">
+    <div className={topPaneClasses}>
       <div className="top-pane-text-container">
         <h1> Find a teammate in seconds...</h1>
         {/* <h2> it's dangerous to go alone!</h2> */}
