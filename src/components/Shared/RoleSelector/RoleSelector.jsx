@@ -5,18 +5,15 @@ import RoleOption from "./RoleOption";
 import "./_role-selector.less";
 
 const RoleSelector = props => {
-  const [state, setState] = useState({
-    popupOpen: false,
-    role: null
-  });
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const handleClick = () => {
-    setState({ popupOpen: true });
+    setPopupOpen(true);
   };
 
   const setRole = (e, inputRole) => {
     e.stopPropagation();
-    setState({ role: inputRole });
+    setPopupOpen(false);
     props.passRoles(e, inputRole, props.isPrimary);
   };
 
@@ -24,16 +21,14 @@ const RoleSelector = props => {
     <div className="role-selector-container">
       <div onClick={() => handleClick()} id="baseDiv">
         <RoleOption
-          option={
-            props.overRide ? props.overRide : state.role ? state.role : "Fill"
-          }
+          option={props.role ? props.role : "Fill"}
           handleRoleChange={() => {}}
           placeHolder
         />
       </div>
       <RoleWindow
         disabledRole={props.disabledRole}
-        isOpen={state.popupOpen}
+        isOpen={popupOpen}
         handleRoleChange={setRole}
       />
     </div>
@@ -44,7 +39,8 @@ RoleSelector.propTypes = {
   disabledRole: PropTypes.string,
   isPrimary: PropTypes.bool,
   overRide: PropTypes.string,
-  passRoles: PropTypes.func
+  passRoles: PropTypes.func,
+  role: PropTypes.string
 };
 
 export default RoleSelector;

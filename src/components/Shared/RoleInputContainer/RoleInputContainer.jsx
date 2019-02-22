@@ -8,14 +8,25 @@ const RoleInputContainer = props => {
   const [secondaryRole, setSecondaryRole] = useState(null);
 
   const handleClick = (e, inputRole, isPrimary) => {
+    //changing primary role
     if (isPrimary) {
+      //swap if we're setting primary equal to secondary
       if (inputRole === secondaryRole) {
         setSecondaryRole(primaryRole);
         setPrimaryRole(inputRole);
+      } else {
+        setPrimaryRole(inputRole);
       }
-      setPrimaryRole(inputRole);
-    } else {
-      setSecondaryRole(inputRole);
+    }
+    //changing secondary role
+    else {
+      //swap if we're setting secondary equal to primary
+      if (inputRole === primaryRole) {
+        setSecondaryRole(inputRole);
+        setPrimaryRole(secondaryRole);
+      } else {
+        setSecondaryRole(inputRole);
+      }
     }
   };
 
@@ -38,12 +49,12 @@ const RoleInputContainer = props => {
         {props.lfRoles ? "Select desired duo's roles" : "Select your roles"}
       </h4>
       <div className="role-input-container">
-        <RoleSelector isPrimary passRoles={handleClick} />
+        <RoleSelector isPrimary passRoles={handleClick} role={primaryRole} />
         {primaryRole && primaryRole !== "Fill" && (
           <RoleSelector
             disabledRole={primaryRole !== "Fill" ? primaryRole : null}
-            overRide={secondaryRole}
             passRoles={handleClick}
+            role={secondaryRole}
           />
         )}
       </div>
