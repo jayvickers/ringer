@@ -1,0 +1,46 @@
+@import "../_globalstyle/_ringer-variables.less";
+
+.action-pane {
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 400px;
+  max-height: 340px;
+  background-color: @off-white-background;
+  margin: 5px auto 20px;
+  transition: box-shadow 150ms ease-in;
+  transition: margin-top 150ms ease-in;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 10px;
+  &:hover {
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .action-pane-content-container {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    .summoner-name-container {
+      width: 100%;
+    }
+    .action-pane-header {
+      margin: 10px auto 0px auto;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+  h3 {
+    margin: auto 0;
+  }
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
