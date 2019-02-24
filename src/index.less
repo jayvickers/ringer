@@ -22,7 +22,8 @@ code {
   .App {
     height: 100% !important;
   }
-  .top-pane {
+  div.top-pane {
+    height: 100vh;
     .top-pane-text-container {
       h1 {
         margin: 70px auto auto;
@@ -51,13 +52,15 @@ code {
   }
 
   .top-pane {
-    flex-direction: row !important;
-    height: 60%;
-    .top-pane-text-container {
-      width: 40%;
-      display: flex;
-      h1 {
-        margin: auto 0;
+    &:not(.has-results-pane) {
+      flex-direction: row !important;
+      height: 60%;
+      .top-pane-text-container {
+        width: 40%;
+        display: flex;
+        h1 {
+          margin: auto 0;
+        }
       }
     }
 
