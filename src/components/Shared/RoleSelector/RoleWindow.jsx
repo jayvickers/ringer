@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "./RoleOption";
+import Roles from "../../Shared/Types/Roles.js";
 
 const RoleWindow = props => {
   const handleClick = e => {
-    props.handleRoleChange(e, "Fill");
+    props.handleRoleChange(e, Roles.fill);
   };
   return (
     <div
@@ -14,31 +15,34 @@ const RoleWindow = props => {
     >
       <div className="option-container">
         <RoleOption
-          isDisabled={props.disabledRole === "Top"}
-          option="Top"
+          isDisabled={props.disabledRole === Roles.top}
+          option={Roles.top}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
-          isDisabled={props.disabledRole === "Jungle"}
-          option="Jungle"
+          isDisabled={props.disabledRole === Roles.jungle}
+          option={Roles.jungle}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
-          isDisabled={props.disabledRole === "Mid"}
-          option="Mid"
+          isDisabled={props.disabledRole === Roles.mid}
+          option={Roles.mid}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
-          isDisabled={props.disabledRole === "Bot"}
-          option="Bot"
+          isDisabled={props.disabledRole === Roles.bot}
+          option={Roles.bot}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
-          isDisabled={props.disabledRole === "Support"}
-          option="Support"
+          isDisabled={props.disabledRole === Roles.support}
+          option={Roles.support}
           handleRoleChange={props.handleRoleChange}
         />
-        <RoleOption option="Fill" handleRoleChange={props.handleRoleChange} />
+        <RoleOption
+          option={Roles.fill}
+          handleRoleChange={props.handleRoleChange}
+        />
       </div>
     </div>
   );

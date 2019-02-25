@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import RoleWindow from "./RoleWindow";
 import RoleOption from "./RoleOption";
+import Roles from "../../Shared/Types/Roles.js";
 import "./_role-selector.less";
 
 const RoleSelector = props => {
@@ -21,7 +22,7 @@ const RoleSelector = props => {
     <div className="role-selector-container">
       <div onClick={() => handleClick()} id="baseDiv">
         <RoleOption
-          option={props.role ? props.role : "Fill"}
+          option={props.role ? props.role : Roles.fill}
           handleRoleChange={() => {}}
           placeHolder
         />
