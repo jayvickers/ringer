@@ -19,7 +19,8 @@ const ResultCard = props => {
   const getResultCardBodyContent = () => {
     return (
       <div className="result-card-content-container">
-        {getSummonerName()} <hr /> {getRank()} <hr />
+        {getSummonerName()}
+        {getRank()}
         {getTopChampions()}
       </div>
     );
