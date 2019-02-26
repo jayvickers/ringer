@@ -14,14 +14,15 @@ const ResultCard = props => {
   const getResultCardBodyContent = () => {
     return (
       <div className="result-card-content-container">
-        {getSummonerName()} {getRank()} {getTopChampions()}
+        {getSummonerName()} <hr /> {getRank()}
+        {getTopChampions()}
       </div>
     );
   };
 
   const getSummonerName = () => {
     return (
-      <div className="result-card-name-container"> {props.summonerName}</div>
+      <div className="result-card-name-container">{props.summonerName}</div>
     );
   };
 
