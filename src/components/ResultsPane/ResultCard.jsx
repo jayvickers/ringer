@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RoleOption from "../Shared/RoleSelector/RoleOption";
-import Roles from "../Shared/Types/Roles";
+import ResultRank from "./ResultRank";
 import "./_result-card.less";
 
 const ResultCard = props => {
   const getRank = () => {
     return (
-      <div className="result-card-rank-container">
-        {`${props.rank} - ${props.winRate} winrate - 100 games`}
-        <RoleOption handleRoleChange={() => {}} option={props.primaryRole} />
-        <RoleOption handleRoleChange={() => {}} option={props.secondaryRole} />
-      </div>
+      <ResultRank
+        primaryRole={props.primaryRole}
+        rank={props.rank}
+        secondaryRole={props.secondaryRole}
+        winRate={props.winRate}
+      />
     );
   };
 

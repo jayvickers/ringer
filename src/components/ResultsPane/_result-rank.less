@@ -1,0 +1,42 @@
+@import "../_globalstyle/_ringer-variables.less";
+.result-rank-container {
+  display: flex;
+  .rank-content-container {
+    display: flex;
+    flex-direction: row;
+    .rank-image-container {
+      display: flex;
+      flex-direction: column;
+      .rank-label {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .rank-image {
+        width: 100px;
+        height: 100px;
+        background-image: url("../../images/iron_1.png");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover;
+      }
+    }
+
+    .role-option-container {
+      width: 40px;
+      height: 55px;
+      position: unset;
+      transform: none;
+      .role-option {
+        width: 30px;
+        height: 30px;
+      }
+      .role-label {
+        // width: auto;
+        // letter-spacing: unset;
+        // color: @charcoal-font-color;
+        // font-size: 16px;
+        display: none;
+      }
+    }
+  }
+}
