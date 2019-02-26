@@ -1,0 +1,37 @@
+@import "../_globalstyle/_ringer-variables.less";
+.results-champion-container {
+  display: flex;
+  flex-direction: row;
+  margin: @result-champion-spacing auto;
+  padding: @result-champion-spacing;
+  border-bottom: 1px solid rgba(66, 67, 68, 0.2);
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  .champion-image {
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    &.Velkoz {
+      background-image: url("../../images/Velkoz.png");
+    }
+    &.Vladimir {
+      background-image: url("../../images/Vladimir.png");
+    }
+    &.Kassadin {
+      background-image: url("../../images/Kassadin.png");
+    }
+  }
+  .champion-info-container {
+    margin: auto;
+    font-size: 14px;
+    font-weight: bold;
+    .champion-info-subtitle {
+      font-size: 11px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ResultChampion from "./ResultChampion";
 import ResultRank from "./ResultRank";
 import "./_result-card.less";
 
@@ -18,7 +19,7 @@ const ResultCard = props => {
   const getResultCardBodyContent = () => {
     return (
       <div className="result-card-content-container">
-        {getSummonerName()} <hr /> {getRank()}
+        {getSummonerName()} <hr /> {getRank()} <hr />
         {getTopChampions()}
       </div>
     );
@@ -34,9 +35,21 @@ const ResultCard = props => {
   const getTopChampions = () => {
     return (
       <div className="result-card-top-champions-container">
-        <div className="champion-container">
-          Teemo - 25% winrate - 100 games
-        </div>
+        <ResultChampion
+          champion="Velkoz"
+          gamesPlayed="20 games played"
+          winRate={"69% winrate"}
+        />
+        <ResultChampion
+          champion="Vladimir"
+          gamesPlayed="10 games played"
+          winRate={"50% winrate"}
+        />
+        <ResultChampion
+          champion="Kassadin"
+          gamesPlayed="5 games played"
+          winRate={"20% winrate"}
+        />
       </div>
     );
   };
