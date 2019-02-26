@@ -26,7 +26,8 @@ const ResultCard = props => {
 
   const getSummonerName = () => {
     return (
-      <div className="result-card-name-container">{props.summonerName}</div>
+      <h3>{props.summonerName}</h3>
+      // <div className="result-card-name-container">{props.summonerName}</div>
     );
   };
 

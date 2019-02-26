@@ -24,6 +24,7 @@ const RoleSelector = props => {
         <RoleOption
           option={props.role ? props.role : Roles.fill}
           handleRoleChange={() => {}}
+          hasHover
           placeHolder
         />
       </div>

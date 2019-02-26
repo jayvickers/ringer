@@ -4,12 +4,13 @@
   .rank-content-container {
     display: flex;
     flex-direction: row;
+    width: 100%;
     .rank-image-container {
       display: flex;
       flex-direction: column;
       .rank-label {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
       }
       .rank-image {
         width: 100px;
@@ -21,21 +22,31 @@
       }
     }
 
-    .role-option-container {
-      width: 40px;
-      height: 55px;
-      position: unset;
-      transform: none;
-      .role-option {
-        width: 30px;
-        height: 30px;
+    .rank-info-content-container {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin-bottom: auto;
       }
-      .role-label {
-        // width: auto;
-        // letter-spacing: unset;
-        // color: @charcoal-font-color;
-        // font-size: 16px;
-        display: none;
+      .role-option-container {
+        width: 40px;
+        height: fit-content;
+        position: unset;
+        transform: none;
+        margin: auto auto 10px;
+        cursor: unset;
+        .role-option {
+          width: 30px;
+          height: 30px;
+        }
+        .role-label {
+          width: auto;
+          letter-spacing: unset;
+          color: @charcoal-font-color;
+          font-size: 14px;
+          font-weight: bold;
+          // display: none;
+        }
       }
     }
   }

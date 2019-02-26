@@ -1,13 +1,17 @@
 import React from "react";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./_role-option.less";
 
 const RoleOption = props => {
-  const containerClasses = `role-option-container ${
-    props.placeHolder ? "placeholder" : ""
-  } ${props.isDisabled ? "disabled" : ""}`;
+  const containerClasses = classNames({
+    "role-option-container": true,
+    placeholder: props.placeHolder,
+    disabled: props.isDisabled,
+    "has-hover": props.hasHover
+  });
 
-  const optionClasses = `role-option ${props.option}`;
+  const optionClasses = classNames({ [`role-option ${props.option}`]: true });
 
   return (
     <div
@@ -21,6 +25,7 @@ const RoleOption = props => {
 };
 
 RoleOption.propTypes = {
+  hasHover: PropTypes.bool,
   isDisabled: PropTypes.bool,
   option: PropTypes.string,
   handleRoleChange: PropTypes.func,

@@ -15,31 +15,37 @@ const RoleWindow = props => {
     >
       <div className="option-container">
         <RoleOption
+          hasHover
           isDisabled={props.disabledRole === Roles.top}
           option={Roles.top}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
+          hasHover
           isDisabled={props.disabledRole === Roles.jungle}
           option={Roles.jungle}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
+          hasHover
           isDisabled={props.disabledRole === Roles.mid}
           option={Roles.mid}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
+          hasHover
           isDisabled={props.disabledRole === Roles.bot}
           option={Roles.bot}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
+          hasHover
           isDisabled={props.disabledRole === Roles.support}
           option={Roles.support}
           handleRoleChange={props.handleRoleChange}
         />
         <RoleOption
+          hasHover
           option={Roles.fill}
           handleRoleChange={props.handleRoleChange}
         />
