@@ -5,22 +5,20 @@ import ResultRank from "./ResultRank";
 import "./_result-card.less";
 
 const ResultCard = props => {
-  const getRank = () => {
-    return (
-      <ResultRank
-        primaryRole={props.primaryRole}
-        rank={props.rank}
-        secondaryRole={props.secondaryRole}
-        winRate={props.winRate}
-      />
-    );
+  const getRank = (role, rank, winrate) => {
+    return <ResultRank role={role} rank={rank} winRate={winrate} />;
   };
 
   const getResultCardBodyContent = () => {
     return (
       <div className="result-card-content-container">
         {getSummonerName()}
-        {getRank()}
+        {getRank(props.primaryRole, props.primaryRank, props.primaryWinRate)}
+        {getRank(
+          props.secondaryRole,
+          props.secondaryRank,
+          props.secondaryWinRate
+        )}
         {getTopChampions()}
       </div>
     );
@@ -62,10 +60,12 @@ const ResultCard = props => {
 
 ResultCard.propTypes = {
   primaryRole: PropTypes.string,
-  rank: PropTypes.string,
+  primaryRank: PropTypes.string,
   secondaryRole: PropTypes.string,
+  secondaryRank: PropTypes.string,
   summonerName: PropTypes.string,
-  winRate: PropTypes.string
+  primaryWinRate: PropTypes.string,
+  secondaryWinRate: PropTypes.string
 };
 
 export default ResultCard;

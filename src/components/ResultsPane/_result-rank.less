@@ -1,6 +1,11 @@
 @import "../_globalstyle/_ringer-variables.less";
 .result-rank-container {
   display: flex;
+  &:nth-of-type(2) {
+    .rank-content-container {
+      border-top: none;
+    }
+  }
   .rank-content-container {
     padding: 10px 0;
     display: flex;
@@ -10,6 +15,7 @@
     border: 1px solid rgba(66, 67, 68, 0.2);
     border-left: none;
     border-right: none;
+
     .rank-image-container {
       display: flex;
       flex-direction: column;

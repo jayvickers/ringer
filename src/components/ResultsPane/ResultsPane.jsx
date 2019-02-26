@@ -9,18 +9,22 @@ const ResultsPane = props => {
   //for now can just force 5 cards for templating
   const getResultCards = (
     primaryRole,
-    rank,
+    primaryRank,
     secondaryRole,
+    secondaryRank,
     summonerName,
-    winRate
+    primaryWinRate,
+    secondaryWinRate
   ) => {
     return (
       <ResultCard
         primaryRole={primaryRole}
-        rank={rank}
+        primaryRank={primaryRank}
         secondaryRole={secondaryRole}
+        secondaryRank={secondaryRank}
         summonerName={summonerName}
-        winRate={winRate}
+        primaryWinRate={primaryWinRate}
+        secondaryWinRate={secondaryWinRate}
       />
     );
   };
@@ -29,34 +33,50 @@ const ResultsPane = props => {
       <div className="results-pane-content-container">
         <h3> {"muh results"}</h3>
         <div className="result-card-row">
-          {getResultCards(Roles.top, "iron 5", Roles.jungle, "jtsw", "0%")}
+          {getResultCards(
+            Roles.top,
+            "iron 5",
+            Roles.jungle,
+            "bronze 5",
+            "jtsw",
+            "0%",
+            "60%"
+          )}
           {getResultCards(
             Roles.jungle,
             "challenger",
             Roles.top,
+            "grand master",
             "xmithie",
-            "10%"
+            "10%",
+            "70%"
           )}
           {getResultCards(
             Roles.mid,
             "iron 5",
             Roles.bot,
+            "bronze 5",
             "CELLSINTERLINKED",
-            "20%"
+            "20%",
+            "30%"
           )}
           {getResultCards(
             Roles.bot,
             "challenger",
             Roles.jungle,
+            "diamond 5",
             "doublelift",
-            "30%"
+            "30%",
+            "80%"
           )}
           {getResultCards(
             Roles.support,
             "challenger",
             Roles.mid,
+            "platinum 4",
             "corejj",
-            "40%"
+            "40%",
+            "100%"
           )}
         </div>
       </div>

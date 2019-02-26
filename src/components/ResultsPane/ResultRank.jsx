@@ -7,7 +7,7 @@ const ResultRank = props => {
   const getRankInfo = () => {
     return (
       <div className="rank-info-content-container">
-        <RoleOption handleRoleChange={() => {}} option={props.primaryRole} />
+        <RoleOption handleRoleChange={() => {}} option={props.role} />
         <span>{props.winRate} winrate</span>
       </div>
     );
@@ -29,9 +29,8 @@ const ResultRank = props => {
 };
 
 ResultRank.propTypes = {
-  primaryRole: PropTypes.string,
+  role: PropTypes.string,
   rank: PropTypes.string,
-  secondaryRole: PropTypes.string,
   winRate: PropTypes.string
 };
 
