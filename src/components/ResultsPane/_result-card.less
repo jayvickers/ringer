@@ -2,9 +2,10 @@
 .results-card-container {
   display: flex;
   border-radius: @large-component-border-radius;
-  width: 19%;
+  width: auto;
   background-color: @off-white-background;
   box-shadow: 0px 1px 5px 1px @default-box-shadow-color;
+  margin: @result-card-margins;
   hr {
     margin-inline-start: 10%;
     margin-inline-end: 10%;
@@ -14,6 +15,7 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    width: 100%;
     h3 {
       margin-block-end: 0.5em;
     }
