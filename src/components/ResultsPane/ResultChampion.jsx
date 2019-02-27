@@ -13,9 +13,15 @@ const ResultChampion = props => {
     return <div className={containerClasses} />;
   };
   const getChampionInfo = () => {
+    const containerClasses = classNames({
+      low: props.winRate <= 45,
+      med: props.winRate > 45 && props.winRate <= 50,
+      "med-high": props.winRate > 50 && props.winRate <= 60,
+      high: props.winRate > 60
+    });
     return (
       <div className="champion-info-container">
-        {props.winRate}
+        <span className={containerClasses}>{props.winRate + " % winrate"}</span>
         <div className="champion-info-subtitle">{props.gamesPlayed}</div>
       </div>
     );
@@ -32,7 +38,7 @@ const ResultChampion = props => {
 ResultChampion.propTypes = {
   champion: PropTypes.string,
   gamesPlayed: PropTypes.string,
-  winRate: PropTypes.string
+  winRate: PropTypes.number
 };
 
 export default ResultChampion;

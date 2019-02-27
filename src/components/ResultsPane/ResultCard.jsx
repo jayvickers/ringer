@@ -37,17 +37,17 @@ const ResultCard = props => {
         <ResultChampion
           champion="Velkoz"
           gamesPlayed="20 games played"
-          winRate={"69% winrate"}
+          winRate={69}
         />
         <ResultChampion
           champion="Vladimir"
           gamesPlayed="10 games played"
-          winRate={"50% winrate"}
+          winRate={50}
         />
         <ResultChampion
           champion="Kassadin"
           gamesPlayed="5 games played"
-          winRate={"20% winrate"}
+          winRate={20}
         />
       </div>
     );
