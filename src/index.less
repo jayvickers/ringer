@@ -104,10 +104,11 @@ code {
 }
 
 @media @allsmallscreens {
-  .top-pane {
+  div.top-pane {
     &.has-results-pane {
-      .result-card-row {
-        flex-wrap: wrap !important;
+      div.result-card-row {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   }

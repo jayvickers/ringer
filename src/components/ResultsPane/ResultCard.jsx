@@ -64,8 +64,8 @@ ResultCard.propTypes = {
   secondaryRole: PropTypes.string,
   secondaryRank: PropTypes.string,
   summonerName: PropTypes.string,
-  primaryWinRate: PropTypes.string,
-  secondaryWinRate: PropTypes.string
+  primaryWinRate: PropTypes.number,
+  secondaryWinRate: PropTypes.number
 };
 
 export default ResultCard;

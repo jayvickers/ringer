@@ -39,8 +39,8 @@ const ResultsPane = props => {
             Roles.jungle,
             "bronze 5",
             "jtsw",
-            "0%",
-            "60%"
+            0,
+            60
           )}
           {getResultCards(
             Roles.jungle,
@@ -48,8 +48,8 @@ const ResultsPane = props => {
             Roles.top,
             "grand master",
             "xmithie",
-            "10%",
-            "70%"
+            10,
+            70
           )}
           {getResultCards(
             Roles.mid,
@@ -57,8 +57,8 @@ const ResultsPane = props => {
             Roles.bot,
             "bronze 5",
             "CELLSINTERLINKED",
-            "20%",
-            "30%"
+            45,
+            30
           )}
           {getResultCards(
             Roles.bot,
@@ -66,8 +66,8 @@ const ResultsPane = props => {
             Roles.jungle,
             "diamond 5",
             "doublelift",
-            "30%",
-            "80%"
+            50,
+            80
           )}
           {getResultCards(
             Roles.support,
@@ -75,8 +75,8 @@ const ResultsPane = props => {
             Roles.mid,
             "platinum 4",
             "corejj",
-            "40%",
-            "100%"
+            55,
+            100
           )}
         </div>
       </div>

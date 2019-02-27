@@ -1,14 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "../Shared/RoleSelector/RoleOption";
+import classNames from "classnames";
 // import Roles from "../Shared/Types/Roles";
 import "./_result-rank.less";
 const ResultRank = props => {
   const getRankInfo = () => {
+    const spanClasses = classNames({
+      low: props.winRate <= 45,
+      med: props.winRate > 45 && props.winRate <= 50,
+      "med-high": props.winRate > 50 && props.winRate <= 60,
+      high: props.winRate > 60
+    });
     return (
       <div className="rank-info-content-container">
         <RoleOption handleRoleChange={() => {}} option={props.role} />
-        <span>{props.winRate} winrate</span>
+        <span className={spanClasses}>{props.winRate}% winrate</span>
       </div>
     );
   };
@@ -31,7 +38,7 @@ const ResultRank = props => {
 ResultRank.propTypes = {
   role: PropTypes.string,
   rank: PropTypes.string,
-  winRate: PropTypes.string
+  winRate: PropTypes.number
 };
 
 export default ResultRank;
