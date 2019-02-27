@@ -19,7 +19,7 @@ const TopPane = props => {
       {showResultsPane ? (
         <ResultsPane />
       ) : (
-        <ActionPane headerText="Ringer.gg" />
+        <ActionPane headerText="ringer.gg" />
       )}
     </div>
   );
