@@ -27,15 +27,14 @@ code {
     height: 100% !important;
   }
   div.top-pane {
-    height: 100vh;
+    &:not(.has-results-pane) {
+      height: 100vh;
+    }
+
     .top-pane-text-container {
       h1 {
-        margin: 70px auto auto;
         font-size: 2em !important;
       }
-    }
-    .action-pane {
-      margin-bottom: 20px;
     }
   }
   .bottom-pane {
@@ -50,31 +49,31 @@ code {
 }
 
 //give more space for small monitors since we're not scrolling vertically
-@media @macbook {
-  .ringer-input-container {
-    margin: 0 12px 4px 0 !important;
-  }
+// @media @macbook {
+//   .ringer-input-container {
+//     margin: 0 12px 4px 0 !important;
+//   }
 
-  .top-pane {
-    &:not(.has-results-pane) {
-      flex-direction: row !important;
-      height: 60%;
-      .top-pane-text-container {
-        width: 40%;
-        display: flex;
-        h1 {
-          margin: auto 0;
-        }
-      }
-    }
+//   .top-pane {
+//     &:not(.has-results-pane) {
+//       flex-direction: row !important;
+//       height: 60%;
+//       .top-pane-text-container {
+//         width: 40%;
+//         display: flex;
+//         h1 {
+//           margin: auto 0;
+//         }
+//       }
+//     }
 
-    .action-pane {
-      margin-bottom: 5px;
-      margin-top: auto;
-      max-height: 315px;
-    }
-  }
-}
+//     .action-pane {
+//       margin-bottom: 5px;
+//       margin-top: auto;
+//       max-height: 315px;
+//     }
+//   }
+// }
 
 //buy some more space for tablet widths
 @media @tablet {

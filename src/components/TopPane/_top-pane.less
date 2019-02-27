@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60vh;
+  //height: 60vh;
+  height: fit-content;
   //background-color: @blue-bg-color;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -13,14 +14,14 @@
   transition: height 150ms ease-in;
 
   &.has-results-pane {
-    height: fit-content;
+    // height: fit-content;
     .top-pane-text-container {
       margin-top: @header-height;
     }
   }
 
   .top-pane-text-container {
-    margin: auto 0;
+    margin: @header-height * 2 auto 0;
     color: @off-white-background-2;
 
     h1 {
