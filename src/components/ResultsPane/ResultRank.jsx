@@ -7,10 +7,10 @@ import "./_result-rank.less";
 const ResultRank = props => {
   const getRankInfo = () => {
     const spanClasses = classNames({
-      low: props.winRate <= 45,
-      med: props.winRate > 45 && props.winRate <= 50,
-      "med-high": props.winRate > 50 && props.winRate <= 60,
-      high: props.winRate > 60
+      low: props.winRate <= 49,
+      med: props.winRate > 49 && props.winRate <= 55,
+
+      high: props.winRate > 55
     });
     return (
       <div className="rank-info-content-container">
