@@ -31,7 +31,10 @@ const ResultsPane = props => {
   const getResultsPaneBodyContent = () => {
     return (
       <div className="results-pane-content-container">
-        <h3> {"Here are your ringers that closest match your "}</h3>
+        <h3>
+          {" "}
+          {"ringers that closest match your specification and duo requirements"}
+        </h3>
         <div className="result-card-row">
           {getResultCards(
             Roles.top,
