@@ -1,7 +1,6 @@
 import React from "react";
 import ResultCard from "./ResultCard";
 import Roles from "../Shared/Types/Roles";
-// import PropTypes from "prop-types";
 import "./_results-pane.less";
 
 const ResultsPane = props => {
@@ -32,7 +31,6 @@ const ResultsPane = props => {
     return (
       <div className="results-pane-content-container">
         <h3>
-          {" "}
           {
             "ringers that closest match your specification and minimum duo requirements"
           }
