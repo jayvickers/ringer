@@ -33,7 +33,9 @@ const ResultsPane = props => {
       <div className="results-pane-content-container">
         <h3>
           {" "}
-          {"ringers that closest match your specification and duo requirements"}
+          {
+            "ringers that closest match your specification and minimum duo requirements"
+          }
         </h3>
         <div className="result-card-row">
           {getResultCards(
