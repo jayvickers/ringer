@@ -31,7 +31,7 @@ const ResultsPane = props => {
   const getResultsPaneBodyContent = () => {
     return (
       <div className="results-pane-content-container">
-        <h3> {"muh results"}</h3>
+        <h3> {"Here are your ringers that closest match your "}</h3>
         <div className="result-card-row">
           {getResultCards(
             Roles.top,
