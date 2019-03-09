@@ -5,20 +5,36 @@ import ResultRank from "./ResultRank";
 import "./_result-card.less";
 
 const ResultCard = props => {
-  const getRank = (role, rank, winrate) => {
-    return <ResultRank role={role} rank={rank} winRate={winrate} />;
+  const getRank = (
+    primaryRole,
+    primaryWinRate,
+    rank,
+    secondaryRole,
+    secondaryWinRate
+  ) => {
+    return (
+      <ResultRank
+        primaryRole={primaryRole}
+        primaryWinRate={primaryWinRate}
+        rank={rank}
+        secondaryRole={secondaryRole}
+        secondaryWinRate={secondaryWinRate}
+      />
+    );
   };
 
   const getResultCardBodyContent = () => {
     return (
       <div className="result-card-content-container">
         {getSummonerName()}
-        {getRank(props.primaryRole, props.primaryRank, props.primaryWinRate)}
         {getRank(
+          props.primaryRole,
+          props.primaryWinRate,
+          props.primaryRank,
           props.secondaryRole,
-          props.secondaryRank,
           props.secondaryWinRate
         )}
+
         {getTopChampions()}
       </div>
     );

@@ -5,17 +5,16 @@ import classNames from "classnames";
 // import Roles from "../Shared/Types/Roles";
 import "./_result-rank.less";
 const ResultRank = props => {
-  const getRankInfo = () => {
+  const getRankInfo = (role, winrate) => {
     const spanClasses = classNames({
-      low: props.winRate <= 49,
-      med: props.winRate > 49 && props.winRate <= 55,
-
-      high: props.winRate > 55
+      low: winrate <= 49,
+      med: winrate > 49 && winrate <= 55,
+      high: winrate > 55
     });
     return (
       <div className="rank-info-content-container">
-        <RoleOption handleRoleChange={() => {}} option={props.role} />
-        <span className={spanClasses}>{props.winRate}% winrate</span>
+        <RoleOption handleRoleChange={() => {}} option={role} />
+        <span className={spanClasses}>{winrate}% winrate</span>
       </div>
     );
   };
@@ -27,7 +26,10 @@ const ResultRank = props => {
           <span className="rank-label">{props.rank}</span>
           <div className="rank-image" />
         </div>
-        {getRankInfo()}
+        <div className="rank-info-row">
+          {getRankInfo(props.primaryRole, props.primaryWinRate)}
+          {getRankInfo(props.secondaryRole, props.secondaryWinRate)}
+        </div>
       </div>
     );
   };
@@ -36,9 +38,11 @@ const ResultRank = props => {
 };
 
 ResultRank.propTypes = {
-  role: PropTypes.string,
+  primaryRole: PropTypes.string,
+  primaryWinRate: PropTypes.number,
   rank: PropTypes.string,
-  winRate: PropTypes.number
+  secondaryRole: PropTypes.string,
+  secondaryWinRate: PropTypes.number
 };
 
 export default ResultRank;
