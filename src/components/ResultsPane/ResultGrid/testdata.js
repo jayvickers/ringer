@@ -20,9 +20,7 @@ const testdata = {
     }
   ],
   defaultColDef: {
-    sortable: false,
-    resizable: true,
-    filter: false
+    resizable: true
   },
   rowData: [
     {

@@ -14,14 +14,18 @@ const ResultGrid = props => {
     }
   };
 
+  const onFirstDataRendered = params => {
+    params.api.sizeColumnsToFit();
+  };
+
   const getGrid = () => {
     return (
       <div className="">
         <div
           className="ag-theme-balham"
           style={{
-            height: "auto",
-            width: "auto"
+            height: "100%",
+            width: "100%"
           }}
         >
           <AgGridReact
@@ -29,6 +33,7 @@ const ResultGrid = props => {
             rowData={testdata.rowData}
             frameworkComponents={customComponents.frameworkComponents}
             rowHeight={55}
+            onFirstDataRendered={onFirstDataRendered}
           />
         </div>
       </div>
