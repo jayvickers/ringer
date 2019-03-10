@@ -15,8 +15,8 @@ const testdata = {
     },
 
     {
-      headerName: "Winrate",
-      field: "winrate"
+      headerName: "Role",
+      field: "role"
     }
   ],
   defaultColDef: {
@@ -27,18 +27,15 @@ const testdata = {
   rowData: [
     {
       rank: "Bronze 5",
+      role: "Bot",
       summoner: "doublelift",
       winrate: "76% winrate"
     },
     {
       rank: "Challenger",
+      role: "Mid",
       summoner: "Jensen",
       winrate: "82% winrate"
-    },
-    {
-      rank: "Porsche",
-      summoner: "Boxter",
-      winrate: 72000
     }
   ]
 };
