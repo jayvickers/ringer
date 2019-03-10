@@ -27,13 +27,13 @@ const testdata = {
       rank: "Bronze 5",
       role: "Bot",
       summoner: "doublelift",
-      winrate: "76% winrate"
+      winrate: "76"
     },
     {
       rank: "Challenger",
       role: "Mid",
       summoner: "Jensen",
-      winrate: "82% winrate"
+      winrate: "82"
     }
   ]
 };

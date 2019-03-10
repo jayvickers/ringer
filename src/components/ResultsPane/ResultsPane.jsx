@@ -6,7 +6,7 @@ import "./_results-pane.less";
 
 const ResultsPane = props => {
   //only show grid button if more than 5 matches found
-  const [showResultsGrid, setShowResultsGrid] = useState(false);
+  const [showResultsGrid, setShowResultsGrid] = useState(true);
   //probably will iterate through array and return 1 card per match
   //for now can just force 5 cards for templating
 

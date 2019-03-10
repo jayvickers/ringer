@@ -4,6 +4,12 @@ import classNames from "classnames";
 import "./_rank-image.less";
 const RankImage = props => {
   const getGridInfo = () => {
+    const winrate = props.winrate;
+    const spanClasses = classNames({
+      low: winrate <= 49,
+      med: winrate > 49 && winrate <= 55,
+      high: winrate > 55
+    });
     const imageClasses = classNames({
       "rank-image": true,
       [`${props.size}`]: props.size
@@ -13,7 +19,7 @@ const RankImage = props => {
         <div className={imageClasses} />
         <div className="info-container">
           <span className="rank-label">{props.rank}</span>
-          <span className="rank-label winrate">{props.winrate}</span>
+          <span className={spanClasses}>{props.winrate}% winrate</span>
         </div>
       </div>
     );
