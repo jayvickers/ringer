@@ -1,0 +1,22 @@
+@import "../_globalstyle/_ringer-variables.less";
+.rank-image-container {
+  display: flex;
+  flex-direction: column;
+  .rank-label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .rank-image {
+    margin: 0 auto;
+    width: @rank-image-small-size;
+    height: @rank-image-small-size;
+    background-image: url("../../images/iron_1.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    &.large {
+      width: @rank-image-large-size;
+      height: @rank-image-large-size;
+    }
+  }
+}

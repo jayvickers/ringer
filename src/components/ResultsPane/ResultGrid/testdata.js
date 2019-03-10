@@ -7,7 +7,11 @@ const testdata = {
     },
     {
       headerName: "Rank",
-      field: "rank"
+      field: "rank",
+      cellRenderer: "rankRenderer",
+      cellRendererParams: {
+        hideLabel: true
+      }
     },
 
     {
@@ -15,6 +19,11 @@ const testdata = {
       field: "winrate"
     }
   ],
+  defaultColDef: {
+    sortable: false,
+    resizable: true,
+    filter: false
+  },
   rowData: [
     {
       rank: "Bronze 5",

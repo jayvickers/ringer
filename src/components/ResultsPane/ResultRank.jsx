@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "../Shared/RoleSelector/RoleOption";
 import classNames from "classnames";
+import Rankimage from "./RankImage";
 // import Roles from "../Shared/Types/Roles";
 import "./_result-rank.less";
 const ResultRank = props => {
@@ -22,10 +23,8 @@ const ResultRank = props => {
     return (
       <div className="rank-content-container">
         {/* {`${props.rank} - ${props.winRate} winrate - 100 games`} */}
-        <div className="rank-image-container">
-          <span className="rank-label">{props.rank}</span>
-          <div className="rank-image" />
-        </div>
+        <Rankimage rank={props.rank} size={"large"} />
+
         <div className="rank-info-row">
           {getRankInfo(props.primaryRole, props.primaryWinRate)}
           {getRankInfo(props.secondaryRole, props.secondaryWinRate)}

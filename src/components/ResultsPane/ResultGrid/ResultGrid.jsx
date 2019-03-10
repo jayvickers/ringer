@@ -4,9 +4,16 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-balham.css";
 import testdata from "./testdata";
+import RankRenderer from "./RankRenderer";
 //import classNames from "classnames";
 import "./_result-grid.less";
 const ResultGrid = props => {
+  const customComponents = {
+    frameworkComponents: {
+      rankRenderer: RankRenderer
+    }
+  };
+
   const getGrid = () => {
     return (
       <div className="">
@@ -20,6 +27,8 @@ const ResultGrid = props => {
           <AgGridReact
             columnDefs={testdata.columnDefs}
             rowData={testdata.rowData}
+            frameworkComponents={customComponents.frameworkComponents}
+            rowHeight={55}
           />
         </div>
       </div>
