@@ -10,7 +10,7 @@ const testdata = {
       field: "rank",
       cellRenderer: "rankRenderer",
       cellRendererParams: {
-        hideLabel: true
+        gridVersion: true
       }
     },
 
