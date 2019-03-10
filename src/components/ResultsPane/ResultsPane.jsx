@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ResultCard from "./ResultCard";
-import ResultGrid from "./ResultGrid";
+import ResultGrid from "./ResultGrid/ResultGrid";
 import Roles from "../Shared/Types/Roles";
 import "./_results-pane.less";
 
