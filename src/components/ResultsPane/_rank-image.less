@@ -19,4 +19,22 @@
       height: @rank-image-large-size;
     }
   }
+  &.grid {
+    flex-direction: row;
+    .rank-image {
+      margin: auto 5px auto 10px;
+    }
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      justify-content: center;
+      span {
+        display: flex;
+        line-height: 1.25em;
+        font-size: 12px;
+        justify-content: left;
+      }
+    }
+  }
 }

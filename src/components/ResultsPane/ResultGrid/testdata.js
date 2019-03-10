@@ -28,12 +28,12 @@ const testdata = {
     {
       rank: "Bronze 5",
       summoner: "doublelift",
-      winrate: 35000
+      winrate: "76% winrate"
     },
     {
       rank: "Challenger",
       summoner: "Jensen",
-      winrate: 32000
+      winrate: "82% winrate"
     },
     {
       rank: "Porsche",

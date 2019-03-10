@@ -9,8 +9,12 @@ const RankImage = props => {
       [`${props.size}`]: props.size
     });
     return (
-      <div className="rank-image-container">
+      <div className="rank-image-container grid">
         <div className={imageClasses} />
+        <div className="info-container">
+          <span className="rank-label">{props.rank}</span>
+          <span className="rank-label winrate">{props.winrate}</span>
+        </div>
       </div>
     );
   };
@@ -37,7 +41,8 @@ const RankImage = props => {
 RankImage.propTypes = {
   gridVersion: PropTypes.bool,
   rank: PropTypes.string,
-  size: PropTypes.string
+  size: PropTypes.string,
+  winrate: PropTypes.string
 };
 
 export default RankImage;

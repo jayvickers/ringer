@@ -8,7 +8,11 @@ const RankRenderer = params => {
   const renderGridRank = () => {
     return (
       <div className="grid-rank-container">
-        <RankImage gridVersion={params.gridVersion} rank={params.data.rank} />
+        <RankImage
+          gridVersion={params.gridVersion}
+          rank={params.data.rank}
+          winrate={params.data.winrate}
+        />
       </div>
     );
   };
