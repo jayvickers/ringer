@@ -67,9 +67,9 @@ const RankImage = props => {
       return ImagePaths.platinum;
     } else if (curRank.includes("diamond")) {
       return ImagePaths.diamond;
-    } else if (curRank.includes("master")) {
+    } else if (curRank.includes("master") && !curRank.includes("grand")) {
       return ImagePaths.master;
-    } else if (curRank.includes("grandmaster")) {
+    } else if (curRank.includes("grand")) {
       return ImagePaths.grandmaster;
     } else if (curRank.includes("challenger")) {
       return ImagePaths.challenger;
