@@ -20,6 +20,7 @@ const RankImage = props => {
         <div className="info-container">
           <span className="rank-label">{props.rank}</span>
           <span className={spanClasses}>{props.winrate}% winrate</span>
+          <span className="rank-games-played">{props.gamesPlayed} games</span>
         </div>
       </div>
     );
@@ -45,6 +46,7 @@ const RankImage = props => {
 };
 
 RankImage.propTypes = {
+  gamesPlayed: PropTypes.string,
   gridVersion: PropTypes.bool,
   rank: PropTypes.string,
   size: PropTypes.string,
