@@ -25,6 +25,7 @@ const RoleOption = props => {
 };
 
 RoleOption.propTypes = {
+  gridVersion: PropTypes.bool,
   hasHover: PropTypes.bool,
   isDisabled: PropTypes.bool,
   option: PropTypes.string,

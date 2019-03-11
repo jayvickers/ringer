@@ -23,7 +23,11 @@ const ResultRank = props => {
     return (
       <div className="rank-content-container">
         {/* {`${props.rank} - ${props.winRate} winrate - 100 games`} */}
-        <Rankimage rank={props.rank} size={"large"} />
+        <Rankimage
+          imgSrc={"images/emblems/"}
+          rank={props.rank}
+          size={"large"}
+        />
 
         <div className="rank-info-row">
           {getRankInfo(props.primaryRole, props.primaryWinRate)}

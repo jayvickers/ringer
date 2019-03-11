@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import RankImage from "../RankImage";
 //import classNames from "classnames";
 // import "./_result-grid.less";
-const RankRenderer = params => {
-  const renderGridRank = () => {
+const RoleRenderer = params => {
+  const renderGridRole = () => {
     return (
       <div className="grid-rank-container">
         <RankImage
@@ -19,11 +19,11 @@ const RankRenderer = params => {
     );
   };
 
-  return renderGridRank();
+  return renderGridRole();
 };
 
-RankRenderer.propTypes = {
+RoleRenderer.propTypes = {
   rank: PropTypes.string
 };
 
-export default RankRenderer;
+export default RoleRenderer;

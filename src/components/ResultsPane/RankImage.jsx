@@ -21,7 +21,7 @@ const RankImage = props => {
 
     return (
       <div className="rank-image-container grid">
-        <img src={props.imgSrc + imgPath} className={imageClasses} />
+        <img alt="rank" src={props.imgSrc + imgPath} className={imageClasses} />
         <div className="info-container">
           <span className="rank-label">{props.rank}</span>
           <span className={spanClasses}>{props.winrate}% winrate</span>
@@ -35,10 +35,11 @@ const RankImage = props => {
       "rank-image": true,
       [`${props.size}`]: props.size
     });
+    const imgPath = getImagePath();
     return (
       <div className="rank-image-container">
         <span className="rank-label">{props.rank}</span>
-        <div className={imageClasses} />
+        <img alt="rank" src={props.imgSrc + imgPath} className={imageClasses} />
       </div>
     );
   };

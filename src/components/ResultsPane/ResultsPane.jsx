@@ -15,7 +15,7 @@ const ResultsPane = props => {
       <div className="result-card-row">
         {getResultCard(
           Roles.top,
-          "iron 5",
+          "bronze 5",
           Roles.jungle,
           "bronze 5",
           "jtsw",
@@ -42,7 +42,7 @@ const ResultsPane = props => {
         )}
         {getResultCard(
           Roles.bot,
-          "challenger",
+          "diamond 2",
           Roles.jungle,
           "diamond 5",
           "doublelift",
@@ -51,7 +51,7 @@ const ResultsPane = props => {
         )}
         {getResultCard(
           Roles.support,
-          "challenger",
+          "master",
           Roles.mid,
           "platinum 4",
           "corejj",
