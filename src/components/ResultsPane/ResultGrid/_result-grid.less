@@ -2,6 +2,14 @@
 
 .result-grid-container {
   margin-bottom: @result-row-and-grid-bottom-margin;
+  .ag-theme-material {
+    background: @off-white-background;
+    //border-radius: @large-component-border-radius;
+    .ag-header-cell-label {
+      width: 100%;
+      justify-content: center;
+    }
+  }
   .ag-react-container {
     height: 100% !important;
     .grid-image-cell-container {

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
-import "ag-grid-community/dist/styles/ag-theme-balham.css";
+import "ag-grid-community/dist/styles/ag-theme-material.css";
 import testdata from "./testdata";
 import RankRenderer from "./RankRenderer";
 import RoleRenderer from "./RoleRenderer";
@@ -24,7 +24,7 @@ const ResultGrid = props => {
     return (
       <div className="">
         <div
-          className="ag-theme-balham"
+          className="ag-theme-material"
           style={{
             height: "100%",
             width: "100%"
