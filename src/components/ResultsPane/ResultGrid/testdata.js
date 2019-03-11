@@ -3,7 +3,9 @@ const testdata = {
   columnDefs: [
     {
       headerName: "Summoner",
-      field: "summoner"
+      field: "summoner",
+      maxWidth: 200,
+      cellRenderer: "nameRenderer"
     },
     {
       headerName: "Rank",
@@ -15,7 +17,7 @@ const testdata = {
     },
 
     {
-      headerName: "Role",
+      headerName: "Main Role",
       field: "role",
       cellRenderer: "roleRenderer",
       cellRendererParams: {
