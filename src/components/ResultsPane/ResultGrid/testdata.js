@@ -34,7 +34,7 @@ const testdata = {
       winrate: "76",
       games: "25",
       gamesMainRole: "20",
-      winrateMainRole: "62"
+      winrateMainRole: "42"
     },
     {
       rank: "Challenger",
@@ -43,7 +43,7 @@ const testdata = {
       winrate: "82",
       games: "234",
       gamesMainRole: "163",
-      winrateMainRole: "82"
+      winrateMainRole: "52"
     }
   ]
 };
