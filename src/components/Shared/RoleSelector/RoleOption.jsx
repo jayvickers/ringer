@@ -46,7 +46,8 @@ const RoleOption = props => {
 
   const getGridVersion = () => {
     const containerClasses = classNames({
-      "grid-role-container": true
+      "grid-role-container": true,
+      "grid-image-cell-container": true
     });
 
     const winrate = props.winrate;
