@@ -38,6 +38,8 @@ const ResultGrid = props => {
             frameworkComponents={customComponents.frameworkComponents}
             rowHeight={60}
             onFirstDataRendered={onFirstDataRendered}
+            pagination={true}
+            paginationPageSize={10}
           />
         </div>
       </div>
