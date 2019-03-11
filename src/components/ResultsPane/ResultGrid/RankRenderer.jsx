@@ -11,7 +11,7 @@ const RankRenderer = params => {
         <RankImage
           gamesPlayed={params.data.games}
           gridVersion={params.gridVersion}
-          imgSrc={"images/emblems/Emblem_Challenger.png"}
+          imgSrc={"images/emblems/"}
           rank={params.data.rank}
           winrate={params.data.winrate}
         />
