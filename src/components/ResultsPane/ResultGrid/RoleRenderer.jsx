@@ -11,11 +11,21 @@ const RoleRenderer = params => {
     return (
       <div className={containerClasses}>
         <RoleOption
-          gamesPlayed={params.data.gamesMainRole}
+          gamesPlayed={
+            params.secondary
+              ? params.data.gamesSecondaryRole
+              : params.data.gamesMainRole
+          }
           gridVersion={params.gridVersion}
           imgSrc={"images/positions/"}
-          option={params.data.mainRole}
-          winrate={params.data.winrateMainRole}
+          option={
+            params.secondary ? params.data.secondaryRole : params.data.mainRole
+          }
+          winrate={
+            params.secondary
+              ? params.data.winrateSecondaryRole
+              : params.data.winrateMainRole
+          }
         />
       </div>
     );
@@ -25,7 +35,7 @@ const RoleRenderer = params => {
 };
 
 RoleRenderer.propTypes = {
-  rank: PropTypes.string
+  secondary: PropTypes.bool
 };
 
 export default RoleRenderer;

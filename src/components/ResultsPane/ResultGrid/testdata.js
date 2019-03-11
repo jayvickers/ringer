@@ -23,6 +23,15 @@ const testdata = {
       cellRendererParams: {
         gridVersion: true
       }
+    },
+    {
+      headerName: "Secondary Role",
+      field: "secondaryrole",
+      cellRenderer: "roleRenderer",
+      cellRendererParams: {
+        gridVersion: true,
+        secondary: true
+      }
     }
   ],
   defaultColDef: {
@@ -35,9 +44,12 @@ const testdata = {
       mainRole: "Bot",
       summoner: "doublelift",
       winrate: "76",
-      games: "25",
-      gamesMainRole: "20",
-      winrateMainRole: "42"
+      games: "245",
+      gamesMainRole: "205",
+      winrateMainRole: "42",
+      winrateSecondaryRole: "67",
+      secondaryRole: "Jungle",
+      gamesSecondaryRole: "67"
     },
     {
       rank: "Challenger",
@@ -46,7 +58,10 @@ const testdata = {
       winrate: "82",
       games: "234",
       gamesMainRole: "163",
-      winrateMainRole: "52"
+      winrateMainRole: "52",
+      winrateSecondaryRole: "47",
+      secondaryRole: "top",
+      gamesSecondaryRole: "23"
     }
   ]
 };
