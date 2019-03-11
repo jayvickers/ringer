@@ -1,19 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-//import testdata from "./testdata";
 import RoleOption from "../../Shared/RoleSelector/RoleOption";
 //import classNames from "classnames";
-// import "./_result-grid.less";
 const RoleRenderer = params => {
   const renderGridRole = () => {
     return (
-      <div className="grid-rank-container">
-        <RankImage
-          gamesPlayed={params.data.games}
+      <div className="grid-role-container">
+        <RoleOption
+          gamesPlayed={params.data.gamesMainRole}
           gridVersion={params.gridVersion}
-          imgSrc={"../../images/emblems/Emblem_Challenger.png"}
-          rank={params.data.rank}
-          winrate={params.data.winrate}
+          imgSrc={"images/positions/"}
+          option={params.data.mainRole}
+          winrate={params.data.winrateMainRole}
         />
       </div>
     );

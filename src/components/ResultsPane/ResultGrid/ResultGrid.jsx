@@ -5,12 +5,14 @@ import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-balham.css";
 import testdata from "./testdata";
 import RankRenderer from "./RankRenderer";
+import RoleRenderer from "./RoleRenderer";
 //import classNames from "classnames";
 import "./_result-grid.less";
 const ResultGrid = props => {
   const customComponents = {
     frameworkComponents: {
-      rankRenderer: RankRenderer
+      rankRenderer: RankRenderer,
+      roleRenderer: RoleRenderer
     }
   };
 

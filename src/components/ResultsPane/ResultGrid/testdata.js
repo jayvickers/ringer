@@ -16,7 +16,11 @@ const testdata = {
 
     {
       headerName: "Role",
-      field: "role"
+      field: "role",
+      cellRenderer: "roleRenderer",
+      cellRendererParams: {
+        gridVersion: true
+      }
     }
   ],
   defaultColDef: {
@@ -25,17 +29,21 @@ const testdata = {
   rowData: [
     {
       rank: "Bronze 5",
-      role: "Bot",
+      mainRole: "Bot",
       summoner: "doublelift",
       winrate: "76",
-      games: "25"
+      games: "25",
+      gamesMainRole: "20",
+      winrateMainRole: "62"
     },
     {
       rank: "Challenger",
-      role: "Mid",
+      mainRole: "Mid",
       summoner: "Jensen",
       winrate: "82",
-      games: "234"
+      games: "234",
+      gamesMainRole: "163",
+      winrateMainRole: "82"
     }
   ]
 };
