@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 //import testdata from "./testdata";
-import RankImage from "../RankImage";
+import RoleOption from "../../Shared/RoleSelector/RoleOption";
 //import classNames from "classnames";
 // import "./_result-grid.less";
 const RoleRenderer = params => {
