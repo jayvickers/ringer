@@ -32,7 +32,7 @@ const ResultGrid = props => {
             columnDefs={testdata.columnDefs}
             rowData={testdata.rowData}
             frameworkComponents={customComponents.frameworkComponents}
-            rowHeight={55}
+            rowHeight={60}
             onFirstDataRendered={onFirstDataRendered}
           />
         </div>

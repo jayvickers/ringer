@@ -12,11 +12,12 @@ const RankImage = props => {
     });
     const imageClasses = classNames({
       "rank-image": true,
-      [`${props.size}`]: props.size
+      [`${props.size}`]: props.size,
+      "grid-version": true
     });
     return (
       <div className="rank-image-container grid">
-        <div className={imageClasses} />
+        <img src={props.imgSrc} className={imageClasses} />
         <div className="info-container">
           <span className="rank-label">{props.rank}</span>
           <span className={spanClasses}>{props.winrate}% winrate</span>
@@ -48,6 +49,7 @@ const RankImage = props => {
 RankImage.propTypes = {
   gamesPlayed: PropTypes.string,
   gridVersion: PropTypes.bool,
+  imgSrc: PropTypes.string,
   rank: PropTypes.string,
   size: PropTypes.string,
   winrate: PropTypes.string
