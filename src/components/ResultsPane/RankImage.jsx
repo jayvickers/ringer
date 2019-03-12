@@ -18,14 +18,19 @@ const RankImage = props => {
     });
 
     const imgPath = getImagePath();
-
+    const winratetxt = `${props.winrate}% winrate`;
     return (
       <div className="rank-image-container grid">
         <img alt="rank" src={props.imgSrc + imgPath} className={imageClasses} />
         <div className="info-container">
+          <span className="rank-summoner">{props.summoner}</span>
           <span className="rank-label">{props.rank}</span>
-          <span className={spanClasses}>{props.winrate}% winrate</span>
-          <span className="rank-games-played">{props.gamesPlayed} games</span>
+          <span className={spanClasses}>
+            {winratetxt}
+            <span className="rank-games-played">
+              {" / " + props.gamesPlayed} games
+            </span>
+          </span>
         </div>
       </div>
     );
@@ -85,6 +90,7 @@ RankImage.propTypes = {
   imgSrc: PropTypes.string,
   rank: PropTypes.string,
   size: PropTypes.string,
+  summoner: PropTypes.string,
   winrate: PropTypes.string
 };
 

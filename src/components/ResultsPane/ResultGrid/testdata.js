@@ -1,19 +1,20 @@
 //hard coded test data for grid
 const testdata = {
   columnDefs: [
+    // {
+    //   headerName: "Summoner",
+    //   field: "summoner",
+    //   maxWidth: 200,
+    //   cellRenderer: "nameRenderer"
+    // },
     {
       headerName: "Summoner",
-      field: "summoner",
-      maxWidth: 200,
-      cellRenderer: "nameRenderer"
-    },
-    {
-      headerName: "Rank",
       field: "rank",
       cellRenderer: "rankRenderer",
       cellRendererParams: {
         gridVersion: true
-      }
+      },
+      minWidth: 280
     },
 
     {
@@ -127,7 +128,7 @@ const testdata = {
       rank: "gold 4",
       mainRole: "bot",
       summoner: "Zven",
-      winrate: "57",
+      winrate: "50",
       games: "257",
       gamesMainRole: "231",
       winrateMainRole: "44",
@@ -136,16 +137,16 @@ const testdata = {
       gamesSecondaryRole: "42"
     },
     {
-      rank: "Bronze 5",
-      mainRole: "Bot",
-      summoner: "doublelift",
-      winrate: "76",
-      games: "245",
-      gamesMainRole: "205",
-      winrateMainRole: "42",
-      winrateSecondaryRole: "67",
-      secondaryRole: "Jungle",
-      gamesSecondaryRole: "67"
+      rank: "silver 3",
+      mainRole: "Top",
+      summoner: "impact",
+      winrate: "36",
+      games: "687",
+      gamesMainRole: "450",
+      winrateMainRole: "52",
+      winrateSecondaryRole: "27",
+      secondaryRole: "Bot",
+      gamesSecondaryRole: "543"
     },
     {
       rank: "Challenger",
