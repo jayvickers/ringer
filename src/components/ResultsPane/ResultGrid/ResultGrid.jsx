@@ -40,6 +40,7 @@ const ResultGrid = props => {
             onFirstDataRendered={onFirstDataRendered}
             pagination={true}
             paginationPageSize={10}
+            suppressCellSelection={true}
           />
         </div>
       </div>
