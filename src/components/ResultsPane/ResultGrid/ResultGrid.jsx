@@ -36,7 +36,7 @@ const ResultGrid = props => {
             columnDefs={testdata.columnDefs}
             rowData={testdata.rowData}
             frameworkComponents={customComponents.frameworkComponents}
-            rowHeight={80}
+            rowHeight={75}
             onFirstDataRendered={onFirstDataRendered}
             pagination={true}
             paginationPageSize={10}
