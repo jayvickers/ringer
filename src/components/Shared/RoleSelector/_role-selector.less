@@ -3,13 +3,13 @@
 @midpoint-top: 27%;
 @midpoint-left: 50%;
 @jngbot-top: @midpoint-top + 8%;
-@jngbot-side-offset: 12%;
+@jngbot-side-offset: 15%;
 @topsup-top: @midpoint-top + 21%;
-@topsup-side-offset: 20%;
+@topsup-side-offset: 25%;
 @fill-top: @midpoint-top + 35%;
 .role-selector-container {
   #popUpDiv {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 100;
@@ -31,34 +31,39 @@
         left: 25%;
         border-radius: @large-component-border-radius;
         display: flex;
+        flex-direction: column;
 
+        h2 {
+          margin: 5px auto auto;
+          color: @off-white-background-2;
+        }
         //top
-        .role-option-container:nth-child(1) {
+        .role-option-container:nth-child(2) {
           top: @topsup-top;
           left: @midpoint-left - @topsup-side-offset;
         }
         //jng
-        .role-option-container:nth-child(2) {
+        .role-option-container:nth-child(3) {
           top: @jngbot-top;
           left: @midpoint-left - @jngbot-side-offset;
         }
         //mid
-        .role-option-container:nth-child(3) {
+        .role-option-container:nth-child(4) {
           top: @midpoint-top;
           left: 50%;
         }
         //bot
-        .role-option-container:nth-child(4) {
+        .role-option-container:nth-child(5) {
           top: @jngbot-top;
           left: @midpoint-left + @jngbot-side-offset;
         }
         //sup
-        .role-option-container:nth-child(5) {
+        .role-option-container:nth-child(6) {
           top: @topsup-top;
           left: @midpoint-left + @topsup-side-offset;
         }
         //fill
-        .role-option-container:nth-child(6) {
+        .role-option-container:nth-child(7) {
           top: @fill-top;
           left: 50%;
         }

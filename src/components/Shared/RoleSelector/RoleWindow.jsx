@@ -14,6 +14,7 @@ const RoleWindow = props => {
       id="popUpDiv"
     >
       <div className="option-container">
+        <h2>Click icon to select role</h2>
         <RoleOption
           hasHover
           isDisabled={props.disabledRole === Roles.top}
