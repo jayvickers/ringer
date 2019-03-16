@@ -21,6 +21,7 @@ const RoleWindow = props => {
           option={Roles.top}
           handleRoleChange={props.handleRoleChange}
         />
+
         <RoleOption
           hasHover
           isDisabled={props.disabledRole === Roles.jungle}
@@ -50,12 +51,18 @@ const RoleWindow = props => {
           option={Roles.fill}
           handleRoleChange={props.handleRoleChange}
         />
+        <RoleOption
+          currentlySelected
+          option={props.currentlySelected}
+          handleRoleChange={props.handleRoleChange}
+        />
       </div>
     </div>
   );
 };
 
 RoleWindow.propTypes = {
+  currentlySelected: PropTypes.string,
   disabledRole: PropTypes.string,
   handleRoleChange: PropTypes.func,
   isOpen: PropTypes.bool

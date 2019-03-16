@@ -9,7 +9,8 @@ const RoleOption = props => {
       "role-option-container": true,
       placeholder: props.placeHolder,
       disabled: props.isDisabled,
-      "has-hover": props.hasHover
+      "has-hover": props.hasHover,
+      "is-selected": props.currentlySelected
     });
 
     const optionClasses = classNames({ [`role-option ${props.option}`]: true });
@@ -19,8 +20,13 @@ const RoleOption = props => {
         onClick={e => props.handleRoleChange(e, props.option)}
         className={containerClasses}
       >
-        <span className="role-label">{props.option}</span>
-        <div className={optionClasses} />
+        <span className="role-label">
+          {props.currentlySelected ? "Selected" : props.option}
+        </span>
+        <div
+          id={props.currentlySelected ? "current" : props.option}
+          className={optionClasses}
+        />
       </div>
     );
   };
@@ -73,6 +79,7 @@ const RoleOption = props => {
 };
 
 RoleOption.propTypes = {
+  currentlySelected: PropTypes.bool,
   gamesPlayed: PropTypes.string,
   gridVersion: PropTypes.bool,
   hasHover: PropTypes.bool,

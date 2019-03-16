@@ -29,6 +29,7 @@ const RoleSelector = props => {
         />
       </div>
       <RoleWindow
+        currentlySelected={props.role ? props.role : Roles.fill}
         disabledRole={props.disabledRole}
         isOpen={popupOpen}
         handleRoleChange={setRole}
