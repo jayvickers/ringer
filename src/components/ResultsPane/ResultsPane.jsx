@@ -19,7 +19,7 @@ const ResultsPane = props => {
   const Box2 = posed.div({
     open: {
       width: "90%",
-      delayChildren: 200,
+      delayChildren: 150,
       staggerChildren: 50
     },
     closed: { width: "0%", delay: 300 }
