@@ -5,7 +5,7 @@ import Roles from "../../Shared/Types/Roles.js";
 
 const RoleWindow = props => {
   const handleClick = e => {
-    props.handleRoleChange(e, Roles.fill);
+    props.handleRoleChange(e, props.currentlySelected);
   };
   return (
     <div
