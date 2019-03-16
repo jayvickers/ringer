@@ -119,14 +119,25 @@ const ResultsPane = props => {
 
   return (
     <PoseGroup>
-      <Box2
-        key="dw"
-        initialPose="closed"
-        pose="open"
-        className="results-pane-container"
-      >
-        {getResultsPaneBodyContent()}
-      </Box2>
+      {showResultsGrid ? (
+        <div
+          key="dw"
+          initialPose="closed"
+          pose="open"
+          className="results-pane-container"
+        >
+          {getResultsPaneBodyContent()}
+        </div>
+      ) : (
+        <Box2
+          key="dw"
+          initialPose="closed"
+          pose="open"
+          className="results-pane-container"
+        >
+          {getResultsPaneBodyContent()}
+        </Box2>
+      )}
     </PoseGroup>
   );
 };

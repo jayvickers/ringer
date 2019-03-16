@@ -43,6 +43,7 @@ const ResultGrid = props => {
             pagination={true}
             paginationPageSize={10}
             suppressCellSelection={true}
+            animateRows={true}
           />
         </div>
       </div>
