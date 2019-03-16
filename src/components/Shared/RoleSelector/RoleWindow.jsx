@@ -2,18 +2,37 @@ import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "./RoleOption";
 import Roles from "../../Shared/Types/Roles.js";
+import posed from "react-pose";
 
 const RoleWindow = props => {
   const handleClick = e => {
     props.handleRoleChange(e, props.currentlySelected);
   };
+
+  const Modal = posed.div({
+    enter: {
+      y: 0,
+      // opacity: 1,
+      //delay: 300,
+      transition: {
+        y: { type: "spring", stiffness: 1000, damping: 30 },
+        default: { duration: 250 }
+      }
+    },
+    exit: {
+      y: 50,
+      // opacity: 0,
+      transition: { duration: 150 }
+    }
+  });
+
   return (
     <div
       onClick={e => handleClick(e)}
       className={props.isOpen ? "is-open" : ""}
       id="popUpDiv"
     >
-      <div className="option-container">
+      <Modal className="option-container">
         <h2>Click icon to select role</h2>
         <RoleOption
           hasHover
@@ -21,7 +40,6 @@ const RoleWindow = props => {
           option={Roles.top}
           handleRoleChange={props.handleRoleChange}
         />
-
         <RoleOption
           hasHover
           isDisabled={props.disabledRole === Roles.jungle}
@@ -56,7 +74,7 @@ const RoleWindow = props => {
           option={props.currentlySelected}
           handleRoleChange={props.handleRoleChange}
         />
-      </div>
+      </Modal>
     </div>
   );
 };
