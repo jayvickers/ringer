@@ -86,7 +86,7 @@ const ResultsPane = props => {
     secondaryWinRate
   ) => {
     return (
-      <Box>
+      <Box className="card-animation-container">
         <ResultCard
           primaryRole={primaryRole}
           primaryRank={primaryRank}
