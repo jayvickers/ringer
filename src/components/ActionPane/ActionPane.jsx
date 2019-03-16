@@ -4,8 +4,21 @@ import TextInput from "../Shared/TextInput/TextInput";
 import SubmitButton from "../Shared/SubmitButton/SubmitButton";
 import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";
 import "./_action-pane.less";
+import posed, { PoseGroup } from "react-pose";
 
 const ActionPane = props => {
+  const Box = posed.div({
+    closed: { opacity: 0, y: "100%" },
+    open: {
+      y: "0",
+      opacity: 1,
+      transition: {
+        y: { type: "spring", stiffness: 200, damping: 20 },
+        default: { duration: 850 }
+      }
+    }
+  });
+
   const getActionPaneBodyContent = () => {
     const { headerText } = props;
     return (
@@ -45,7 +58,11 @@ const ActionPane = props => {
     return <SubmitButton buttonText="Find a Duo" />;
   };
 
-  return <div className="action-pane">{getActionPaneBodyContent()}</div>;
+  return (
+    <Box initialPose="closed" pose="open" className="action-pane">
+      {getActionPaneBodyContent()}
+    </Box>
+  );
 };
 
 ActionPane.propTypes = {
