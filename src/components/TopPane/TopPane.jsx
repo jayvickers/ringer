@@ -3,25 +3,13 @@ import classNames from "classnames";
 import ActionPane from "../ActionPane/ActionPane";
 import ResultsPane from "../ResultsPane/ResultsPane";
 import "./_top-pane.less";
-import posed, { PoseGroup } from "react-pose";
+import posed from "react-pose";
 
 const TopPane = props => {
-  const [showResultsPane, setShowResultsPane] = useState(false);
+  const [showResultsPane, setShowResultsPane] = useState(true);
   const topPaneClasses = classNames({
     "top-pane": true,
     "has-results-pane": showResultsPane
-  });
-
-  const Box = posed.div({
-    closed: { opacity: 0, y: "100%" },
-    open: {
-      y: "0",
-      opacity: 1,
-      transition: {
-        y: { type: "spring", stiffness: 200, damping: 20 },
-        default: { duration: 850 }
-      }
-    }
   });
 
   const Box2 = posed.div({

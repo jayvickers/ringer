@@ -3,6 +3,7 @@ import ResultCard from "./ResultCard";
 import ResultGrid from "./ResultGrid/ResultGrid";
 import Roles from "../Shared/Types/Roles";
 import "./_results-pane.less";
+import posed, { PoseGroup } from "react-pose";
 
 const ResultsPane = props => {
   //only show grid button if more than 5 matches found
@@ -10,9 +11,23 @@ const ResultsPane = props => {
   //probably will iterate through array and return 1 card per match
   //for now can just force 5 cards for templating
 
+  const Box = posed.div({
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: -100 }
+  });
+
+  const Box2 = posed.div({
+    open: {
+      width: "90%",
+      delayChildren: 200,
+      staggerChildren: 50
+    },
+    closed: { width: "0%", delay: 300 }
+  });
+
   const getResultCardRow = () => {
     return (
-      <div className="result-card-row">
+      <div key="dd" className="result-card-row">
         {getResultCard(
           Roles.top,
           "bronze 5",
@@ -71,15 +86,17 @@ const ResultsPane = props => {
     secondaryWinRate
   ) => {
     return (
-      <ResultCard
-        primaryRole={primaryRole}
-        primaryRank={primaryRank}
-        secondaryRole={secondaryRole}
-        secondaryRank={secondaryRank}
-        summonerName={summonerName}
-        primaryWinRate={primaryWinRate}
-        secondaryWinRate={secondaryWinRate}
-      />
+      <Box>
+        <ResultCard
+          primaryRole={primaryRole}
+          primaryRank={primaryRank}
+          secondaryRole={secondaryRole}
+          secondaryRank={secondaryRank}
+          summonerName={summonerName}
+          primaryWinRate={primaryWinRate}
+          secondaryWinRate={secondaryWinRate}
+        />
+      </Box>
     );
   };
 
@@ -101,7 +118,16 @@ const ResultsPane = props => {
   };
 
   return (
-    <div className="results-pane-container">{getResultsPaneBodyContent()}</div>
+    <PoseGroup>
+      <Box2
+        key="dw"
+        initialPose="closed"
+        pose="open"
+        className="results-pane-container"
+      >
+        {getResultsPaneBodyContent()}
+      </Box2>
+    </PoseGroup>
   );
 };
 

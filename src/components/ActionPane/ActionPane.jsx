@@ -4,7 +4,7 @@ import TextInput from "../Shared/TextInput/TextInput";
 import SubmitButton from "../Shared/SubmitButton/SubmitButton";
 import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";
 import "./_action-pane.less";
-import posed, { PoseGroup } from "react-pose";
+import posed from "react-pose";
 
 const ActionPane = props => {
   const Box = posed.div({
