@@ -5,7 +5,7 @@ import ResultsPane from "../ResultsPane/ResultsPane";
 import "./_top-pane.less";
 
 const TopPane = props => {
-  const [showResultsPane, setShowResultsPane] = useState(false);
+  const [showResultsPane, setShowResultsPane] = useState(true);
   const topPaneClasses = classNames({
     "top-pane": true,
     "has-results-pane": showResultsPane

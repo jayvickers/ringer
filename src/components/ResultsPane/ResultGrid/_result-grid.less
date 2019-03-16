@@ -32,5 +32,35 @@
       height: 100%;
       margin-left: 10%;
     }
+    .grid-top-champions-container {
+      display: flex;
+      height: 100%;
+      li {
+        display: flex;
+        margin: auto;
+      }
+      .results-champion-container {
+        border: none;
+        padding: 0;
+        margin-bottom: 0;
+
+        .champion-image {
+          margin: auto 8px auto 0;
+          width: 50px;
+          height: 50px;
+        }
+        span {
+          display: flex;
+          line-height: 1.25em;
+          font-size: 12px;
+          justify-content: left;
+          font-weight: bold;
+          &.champion-info-subtitle {
+            font-size: 11px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 }

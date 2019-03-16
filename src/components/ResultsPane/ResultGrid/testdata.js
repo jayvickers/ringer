@@ -23,7 +23,8 @@ const testdata = {
       cellRenderer: "roleRenderer",
       cellRendererParams: {
         gridVersion: true
-      }
+      },
+      maxWidth: 180
     },
     {
       headerName: "Secondary Role",
@@ -32,6 +33,15 @@ const testdata = {
       cellRendererParams: {
         gridVersion: true,
         secondary: true
+      },
+      maxWidth: 180
+    },
+    {
+      headerName: "Most Played",
+      field: "mostplayed",
+      cellRenderer: "mostPlayedRenderer",
+      cellRendererParams: {
+        gridVersion: true
       }
     }
   ],
@@ -50,7 +60,12 @@ const testdata = {
       winrateMainRole: "42",
       winrateSecondaryRole: "67",
       secondaryRole: "Jungle",
-      gamesSecondaryRole: "67"
+      gamesSecondaryRole: "67",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Challenger",
@@ -62,7 +77,12 @@ const testdata = {
       winrateMainRole: "52",
       winrateSecondaryRole: "47",
       secondaryRole: "top",
-      gamesSecondaryRole: "23"
+      gamesSecondaryRole: "23",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "iron 5",
@@ -74,7 +94,12 @@ const testdata = {
       winrateMainRole: "72",
       winrateSecondaryRole: "40",
       secondaryRole: "Bot",
-      gamesSecondaryRole: "17"
+      gamesSecondaryRole: "17",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "grand master",
@@ -86,7 +111,12 @@ const testdata = {
       winrateMainRole: "72",
       winrateSecondaryRole: "57",
       secondaryRole: "top",
-      gamesSecondaryRole: "123"
+      gamesSecondaryRole: "123",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "master",
@@ -98,7 +128,12 @@ const testdata = {
       winrateMainRole: "62",
       winrateSecondaryRole: "77",
       secondaryRole: "Jungle",
-      gamesSecondaryRole: "167"
+      gamesSecondaryRole: "167",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "platinum 1",
@@ -110,7 +145,12 @@ const testdata = {
       winrateMainRole: "62",
       winrateSecondaryRole: "100",
       secondaryRole: "support",
-      gamesSecondaryRole: "3"
+      gamesSecondaryRole: "3",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Diamond 1",
@@ -122,7 +162,12 @@ const testdata = {
       winrateMainRole: "67",
       winrateSecondaryRole: "50",
       secondaryRole: "Jungle",
-      gamesSecondaryRole: "12"
+      gamesSecondaryRole: "12",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "gold 4",
@@ -134,7 +179,12 @@ const testdata = {
       winrateMainRole: "44",
       winrateSecondaryRole: "55",
       secondaryRole: "sup",
-      gamesSecondaryRole: "42"
+      gamesSecondaryRole: "42",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "silver 3",
@@ -146,7 +196,12 @@ const testdata = {
       winrateMainRole: "52",
       winrateSecondaryRole: "27",
       secondaryRole: "Bot",
-      gamesSecondaryRole: "543"
+      gamesSecondaryRole: "543",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Challenger",
@@ -158,7 +213,12 @@ const testdata = {
       winrateMainRole: "52",
       winrateSecondaryRole: "47",
       secondaryRole: "top",
-      gamesSecondaryRole: "23"
+      gamesSecondaryRole: "23",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Bronze 5",
@@ -170,7 +230,12 @@ const testdata = {
       winrateMainRole: "42",
       winrateSecondaryRole: "67",
       secondaryRole: "Jungle",
-      gamesSecondaryRole: "67"
+      gamesSecondaryRole: "67",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Challenger",
@@ -182,7 +247,12 @@ const testdata = {
       winrateMainRole: "52",
       winrateSecondaryRole: "47",
       secondaryRole: "top",
-      gamesSecondaryRole: "23"
+      gamesSecondaryRole: "23",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Bronze 5",
@@ -194,7 +264,12 @@ const testdata = {
       winrateMainRole: "42",
       winrateSecondaryRole: "67",
       secondaryRole: "Jungle",
-      gamesSecondaryRole: "67"
+      gamesSecondaryRole: "67",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     },
     {
       rank: "Challenger",
@@ -206,7 +281,12 @@ const testdata = {
       winrateMainRole: "52",
       winrateSecondaryRole: "47",
       secondaryRole: "top",
-      gamesSecondaryRole: "23"
+      gamesSecondaryRole: "23",
+      topChamps: [
+        { champion: { name: "Vladimir", winrate: 80, games: 137 } },
+        { champion: { name: "Kassadin", winrate: 52, games: 81 } },
+        { champion: { name: "Velkoz", winrate: 40, games: 12 } }
+      ]
     }
   ]
 };

@@ -4,6 +4,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-material.css";
 import testdata from "./testdata";
+import MostPlayedRenderer from "./MostPlayedRenderer";
 import NameRenderer from "./NameRenderer";
 import RankRenderer from "./RankRenderer";
 import RoleRenderer from "./RoleRenderer";
@@ -12,6 +13,7 @@ import "./_result-grid.less";
 const ResultGrid = props => {
   const customComponents = {
     frameworkComponents: {
+      mostPlayedRenderer: MostPlayedRenderer,
       nameRenderer: NameRenderer,
       rankRenderer: RankRenderer,
       roleRenderer: RoleRenderer

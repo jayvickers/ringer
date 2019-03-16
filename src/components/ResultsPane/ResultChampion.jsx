@@ -16,19 +16,24 @@ const ResultChampion = props => {
     const containerClasses = classNames({
       low: props.winRate <= 49,
       med: props.winRate > 49 && props.winRate <= 55,
-
       high: props.winRate > 50
     });
     return (
       <div className="champion-info-container">
-        <span className={containerClasses}>{props.winRate + " % winrate"}</span>
-        <div className="champion-info-subtitle">{props.gamesPlayed}</div>
+        {props.gridVersion ? (
+          <span className="champion-name">{props.champion}</span>
+        ) : null}
+        <span className={containerClasses}>{props.winRate + "% winrate"}</span>
+        <span className="champion-info-subtitle">{props.gamesPlayed}</span>
       </div>
     );
   };
-
+  const containerClasses = classNames({
+    "results-champion-container": true,
+    grid: props.gridVersion
+  });
   return (
-    <div className="results-champion-container">
+    <div className={containerClasses}>
       {getChampionImage()}
       {getChampionInfo()}
     </div>
@@ -38,6 +43,7 @@ const ResultChampion = props => {
 ResultChampion.propTypes = {
   champion: PropTypes.string,
   gamesPlayed: PropTypes.string,
+  gridVersion: PropTypes.bool,
   winRate: PropTypes.number
 };
 
