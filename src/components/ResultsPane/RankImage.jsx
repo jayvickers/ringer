@@ -14,7 +14,8 @@ const RankImage = props => {
     const imageClasses = classNames({
       "rank-image": true,
       [`${props.size}`]: props.size,
-      "grid-version": true
+      "grid-version": true,
+      "grid-image": true
     });
 
     const imgPath = getImagePath();

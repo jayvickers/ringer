@@ -64,9 +64,14 @@ const RoleOption = props => {
 
     const imgPath = getRolePath();
 
+    const imgClasses = classNames({
+      "grid-role": true,
+      "grid-image": true
+    });
+
     return (
       <div className={containerClasses}>
-        <img className="grid-role" alt="role" src={props.imgSrc + imgPath} />
+        <img className={imgClasses} alt="role" src={props.imgSrc + imgPath} />
         <div className="role-info-container">
           <span className="role-label-grid">{props.option}</span>
           <span className={spanClasses}>{props.winrate}% winrate</span>

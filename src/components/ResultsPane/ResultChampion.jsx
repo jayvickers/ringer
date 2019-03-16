@@ -7,7 +7,8 @@ const ResultChampion = props => {
   const getChampionImage = () => {
     const containerClasses = classNames({
       "champion-image": true,
-      [`${props.champion}`]: true
+      [`${props.champion}`]: true,
+      "grid-image": props.gridVersion
     });
 
     return <div className={containerClasses} />;
