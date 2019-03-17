@@ -20,7 +20,10 @@ const RoleOption = props => {
       "is-selected": props.currentlySelected
     });
 
-    const optionClasses = classNames({ [`role-option ${props.option}`]: true });
+    const optionClasses = classNames({
+      [`role-option ${props.option}`]: true,
+      current: props.currentlySelected
+    });
 
     return (
       <div
