@@ -4,6 +4,13 @@ import PropTypes from "prop-types";
 import RolePaths from "../../Shared/Types/RolePaths";
 import "./_role-option.less";
 const RoleOption = props => {
+  const winrate = props.winrate;
+  const spanClasses = classNames({
+    low: winrate <= 49,
+    med: winrate > 49 && winrate <= 55,
+    high: winrate > 55
+  });
+
   const getStandardVersion = () => {
     const containerClasses = classNames({
       "role-option-container": true,
@@ -27,6 +34,12 @@ const RoleOption = props => {
           id={props.currentlySelected ? "current" : props.option}
           className={optionClasses}
         />
+        {props.winrate >= 0 && (
+          <span className={spanClasses}>{props.winrate}% winrate</span>
+        )}
+        {props.gamesPlayed && (
+          <span className="role-games">{props.gamesPlayed} games</span>
+        )}
       </div>
     );
   };
@@ -53,13 +66,6 @@ const RoleOption = props => {
   const getGridVersion = () => {
     const containerClasses = classNames({
       "grid-role-container": true
-    });
-
-    const winrate = props.winrate;
-    const spanClasses = classNames({
-      low: winrate <= 49,
-      med: winrate > 49 && winrate <= 55,
-      high: winrate > 55
     });
 
     const imgPath = getRolePath();

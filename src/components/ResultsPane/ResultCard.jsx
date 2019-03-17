@@ -14,9 +14,11 @@ const ResultCard = props => {
   ) => {
     return (
       <ResultRank
+        primaryGames={158}
         primaryRole={primaryRole}
         primaryWinRate={primaryWinRate}
         rank={rank}
+        secondaryGames={62}
         secondaryRole={secondaryRole}
         secondaryWinRate={secondaryWinRate}
       />

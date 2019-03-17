@@ -6,7 +6,7 @@ import Rankimage from "./RankImage";
 // import Roles from "../Shared/Types/Roles";
 import "./_result-rank.less";
 const ResultRank = props => {
-  const getRankInfo = (role, winrate) => {
+  const getRankInfo = (gamesPlayed, role, winrate) => {
     const spanClasses = classNames({
       low: winrate <= 49,
       med: winrate > 49 && winrate <= 55,
@@ -14,15 +14,18 @@ const ResultRank = props => {
     });
     return (
       <div className="rank-info-content-container">
-        <RoleOption handleRoleChange={() => {}} option={role} />
-        <span className={spanClasses}>{winrate}% winrate</span>
+        <RoleOption
+          gamesPlayed={gamesPlayed}
+          handleRoleChange={() => {}}
+          option={role}
+          winrate={winrate}
+        />
       </div>
     );
   };
   const getRank = () => {
     return (
       <div className="rank-content-container">
-        {/* {`${props.rank} - ${props.winRate} winrate - 100 games`} */}
         <Rankimage
           imgSrc={"images/emblems/"}
           rank={props.rank}
@@ -30,8 +33,16 @@ const ResultRank = props => {
         />
 
         <div className="rank-info-row">
-          {getRankInfo(props.primaryRole, props.primaryWinRate)}
-          {getRankInfo(props.secondaryRole, props.secondaryWinRate)}
+          {getRankInfo(
+            props.primaryGames,
+            props.primaryRole,
+            props.primaryWinRate
+          )}
+          {getRankInfo(
+            props.secondaryGames,
+            props.secondaryRole,
+            props.secondaryWinRate
+          )}
         </div>
       </div>
     );
@@ -41,9 +52,11 @@ const ResultRank = props => {
 };
 
 ResultRank.propTypes = {
+  primaryGames: PropTypes.number,
   primaryRole: PropTypes.string,
   primaryWinRate: PropTypes.number,
   rank: PropTypes.string,
+  secondaryGames: PropTypes.number,
   secondaryRole: PropTypes.string,
   secondaryWinRate: PropTypes.number
 };
