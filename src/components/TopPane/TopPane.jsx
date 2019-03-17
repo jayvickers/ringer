@@ -6,7 +6,7 @@ import "./_top-pane.less";
 import posed from "react-pose";
 
 const TopPane = props => {
-  const [showResultsPane, setShowResultsPane] = useState(true);
+  const [showResultsPane, setShowResultsPane] = useState(false);
   const topPaneClasses = classNames({
     "top-pane": true,
     "has-results-pane": showResultsPane

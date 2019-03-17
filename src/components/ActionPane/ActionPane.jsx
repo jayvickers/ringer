@@ -5,18 +5,20 @@ import SubmitButton from "../Shared/SubmitButton/SubmitButton";
 import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";
 import "./_action-pane.less";
 import posed from "react-pose";
+import { transform } from "popmotion";
 
 const ActionPane = props => {
   const Box = posed.div({
-    closed: { opacity: 0, y: "100%" },
-    open: {
-      y: "0",
-      opacity: 1,
-      transition: {
-        y: { type: "spring", stiffness: 200, damping: 20 },
-        default: { duration: 850 }
-      }
-    }
+    // closed: { opacity: 0, y: "100%" },
+    // open: {
+    //   y: "0",
+    //   opacity: 1,
+    //   transition: {
+    //     y: { type: "spring", stiffness: 200, damping: 20 },
+    //     default: { duration: 850 }
+    //   },
+    //   transform: "unset"
+    // }
   });
 
   const getActionPaneBodyContent = () => {
