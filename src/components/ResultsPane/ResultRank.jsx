@@ -1,17 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import RoleOption from "../Shared/RoleSelector/RoleOption";
-import classNames from "classnames";
 import Rankimage from "./RankImage";
 // import Roles from "../Shared/Types/Roles";
 import "./_result-rank.less";
 const ResultRank = props => {
   const getRankInfo = (gamesPlayed, role, winrate) => {
-    const spanClasses = classNames({
-      low: winrate <= 49,
-      med: winrate > 49 && winrate <= 55,
-      high: winrate > 55
-    });
     return (
       <div className="rank-info-content-container">
         <RoleOption

@@ -5,7 +5,6 @@ import SubmitButton from "../Shared/SubmitButton/SubmitButton";
 import RoleInputContainer from "../Shared/RoleInputContainer/RoleInputContainer";
 import "./_action-pane.less";
 import posed from "react-pose";
-import { transform } from "popmotion";
 
 const ActionPane = props => {
   const Box = posed.div({
