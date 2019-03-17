@@ -14,7 +14,8 @@ const testdata = {
       cellRendererParams: {
         gridVersion: true
       },
-      minWidth: 280
+      minWidth: 220,
+      maxWidth: 280
     },
 
     {
@@ -24,7 +25,7 @@ const testdata = {
       cellRendererParams: {
         gridVersion: true
       },
-      maxWidth: 150
+      maxWidth: 140
     },
     {
       headerName: "Secondary Role",
@@ -34,7 +35,7 @@ const testdata = {
         gridVersion: true,
         secondary: true
       },
-      maxWidth: 150
+      maxWidth: 140
     },
     {
       headerName: "Most Played",

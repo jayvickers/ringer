@@ -30,11 +30,16 @@
     .grid-rank-container {
       display: flex;
       height: 100%;
-      margin-left: 10%;
+      //margin-left: 5%;
     }
     .grid-top-champions-container {
       display: flex;
       height: 100%;
+      .champion-image {
+        margin: auto 8px auto 0;
+        width: 50px;
+        height: 50px;
+      }
       li {
         display: flex;
         margin: auto;
@@ -44,11 +49,6 @@
         padding: 0;
         margin-bottom: 0;
 
-        .champion-image {
-          margin: auto 8px auto 0;
-          width: 50px;
-          height: 50px;
-        }
         span {
           display: flex;
           line-height: 1.25em;
@@ -60,6 +60,27 @@
             font-weight: 600;
           }
         }
+      }
+    }
+  }
+}
+@media @allsmallscreens {
+  .result-grid-container {
+    margin-bottom: @result-row-and-grid-bottom-margin;
+    .ag-theme-material {
+      .grid-rank-container {
+        //margin-left: 2%;
+      }
+      .ag-cell {
+        padding-left: 0;
+      }
+      .rank-summoner {
+        font-size: 14px !important;
+      }
+      .grid-image {
+        width: 40px !important;
+        height: 40px !important;
+        margin-left: 0;
       }
     }
   }
