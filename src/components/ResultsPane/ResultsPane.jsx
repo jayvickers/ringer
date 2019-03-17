@@ -20,7 +20,7 @@ const ResultsPane = props => {
     open: {
       width: "90%",
       delayChildren: 150,
-      staggerChildren: 50
+      staggerChildren: 55
     },
     closed: { width: "0%", delay: 300 }
   });
