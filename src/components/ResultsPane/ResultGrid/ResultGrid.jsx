@@ -20,9 +20,23 @@ const ResultGrid = props => {
     }
   };
 
-  const onFirstDataRendered = params => {
-    params.api.sizeColumnsToFit();
+  const autoSizeAll = gridColumnApi => {
+    var allColumnIds = [];
+    gridColumnApi.getAllColumns().forEach(function(column) {
+      allColumnIds.push(column.colId);
+    });
+    gridColumnApi.autoSizeColumns(allColumnIds);
   };
+
+  const onGridReady = params => {
+    //const gridApi = params.api;
+    const gridColumnApi = params.columnApi;
+    autoSizeAll(gridColumnApi);
+  };
+
+  // const onFirstDataRendered = params => {
+  //   params.api.autoSizeColumns();
+  // };
 
   const getGrid = () => {
     return (
@@ -39,7 +53,8 @@ const ResultGrid = props => {
             rowData={testdata.rowData}
             frameworkComponents={customComponents.frameworkComponents}
             rowHeight={75}
-            onFirstDataRendered={onFirstDataRendered}
+            //onFirstDataRendered={onFirstDataRendered}
+            onGridReady={onGridReady}
             pagination={true}
             paginationPageSize={10}
             suppressCellSelection={true}
